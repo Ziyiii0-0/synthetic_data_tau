@@ -1,0 +1,2301 @@
+[
+  {
+    "trajectory_id": "traj_0000",
+    "domain_name": "airline",
+    "exploration_strategy": "seed_data",
+    "max_steps": 2,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2026-06-01T06:09:02.986114",
+        "tool_call": {
+          "id": "seed_40_40_0",
+          "name": "get_reservation_details",
+          "arguments": {
+            "reservation_id": "3RK2T9"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_40_40_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2026-06-01T06:09:02.986124",
+        "tool_call": {
+          "id": "seed_40_40_1",
+          "name": "update_reservation_passengers",
+          "arguments": {
+            "reservation_id": "3RK2T9",
+            "passengers": [
+              {
+                "first_name": "Anya",
+                "last_name": "Garcia",
+                "dob": "1992-11-12"
+              },
+              {
+                "first_name": "Mei",
+                "last_name": "Garcia",
+                "dob": "1989-12-13"
+              }
+            ]
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_40_40_1",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2026-06-01T06:09:02.986128",
+    "end_time": "2026-06-01T06:09:02.986129",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You booked the flight  and you want to change the passenger name on the reservation.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You are Anya Garcia.\n\nYour user id is  anya_garcia_5901.\n\nYour reservation id is 3RK2T9."
+    },
+    "statistics": {
+      "total_steps": 2,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "get_reservation_details": 1,
+        "update_reservation_passengers": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "40",
+    "task_description": {
+      "reason_for_call": "You booked the flight  and you want to change the passenger name on the reservation.",
+      "known_info": "You are Anya Garcia.\n\nYour user id is  anya_garcia_5901.\n\nYour reservation id is 3RK2T9.",
+      "unknown_info": null
+    }
+  },
+  {
+    "trajectory_id": "traj_0001",
+    "domain_name": "airline",
+    "exploration_strategy": "seed_data",
+    "max_steps": 5,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2026-06-01T06:09:02.986137",
+        "tool_call": {
+          "id": "seed_7_7_0",
+          "name": "get_reservation_details",
+          "arguments": {
+            "reservation_id": "XEHM4B"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_7_7_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2026-06-01T06:09:02.986140",
+        "tool_call": {
+          "id": "seed_7_7_1",
+          "name": "get_reservation_details",
+          "arguments": {
+            "reservation_id": "59XX6W"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_7_7_1",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 3,
+        "timestamp": "2026-06-01T06:09:02.986141",
+        "tool_call": {
+          "id": "seed_7_7_2",
+          "name": "update_reservation_flights",
+          "arguments": {
+            "reservation_id": "XEHM4B",
+            "cabin": "economy",
+            "flights": [
+              {
+                "flight_number": "HAT005",
+                "date": "2024-05-20"
+              },
+              {
+                "flight_number": "HAT178",
+                "date": "2024-05-30"
+              }
+            ],
+            "payment_id": "credit_card_2408938"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_7_7_2",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 4,
+        "timestamp": "2026-06-01T06:09:02.986143",
+        "tool_call": {
+          "id": "seed_7_7_3",
+          "name": "cancel_reservation",
+          "arguments": {
+            "reservation_id": "XEHM4B"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_7_7_3",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 5,
+        "timestamp": "2026-06-01T06:09:02.986144",
+        "tool_call": {
+          "id": "seed_7_7_4",
+          "name": "cancel_reservation",
+          "arguments": {
+            "reservation_id": "59XX6W"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_7_7_4",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2026-06-01T06:09:02.986147",
+    "end_time": "2026-06-01T06:09:02.986148",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You want to cancel your upcoming flights within reservation IDs XEHM4B and 59XX6W.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "Your user id is 'daiki_muller_1116'."
+    },
+    "statistics": {
+      "total_steps": 5,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "get_reservation_details": 2,
+        "update_reservation_flights": 1,
+        "cancel_reservation": 2
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "7",
+    "task_description": {
+      "reason_for_call": "You want to cancel your upcoming flights within reservation IDs XEHM4B and 59XX6W.",
+      "known_info": "Your user id is 'daiki_muller_1116'.",
+      "unknown_info": null
+    }
+  },
+  {
+    "trajectory_id": "traj_0002",
+    "domain_name": "airline",
+    "exploration_strategy": "seed_data",
+    "max_steps": 2,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2026-06-01T06:09:02.986154",
+        "tool_call": {
+          "id": "seed_1_1_0",
+          "name": "get_user_details",
+          "arguments": {
+            "user_id": "raj_sanchez_7340"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_1_1_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2026-06-01T06:09:02.986156",
+        "tool_call": {
+          "id": "seed_1_1_1",
+          "name": "get_reservation_details",
+          "arguments": {
+            "reservation_id": "Q69X3R"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_1_1_1",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2026-06-01T06:09:02.986158",
+    "end_time": "2026-06-01T06:09:02.986159",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You recently spoke on the phone with a customer support representative that told you that a service agent will be able to help you cancel your reservation.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You are Raj Sanchez.\nYour user id is raj_sanchez_7340."
+    },
+    "statistics": {
+      "total_steps": 2,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "get_user_details": 1,
+        "get_reservation_details": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "1",
+    "task_description": {
+      "reason_for_call": "You recently spoke on the phone with a customer support representative that told you that a service agent will be able to help you cancel your reservation.",
+      "known_info": "You are Raj Sanchez.\nYour user id is raj_sanchez_7340.",
+      "unknown_info": null
+    }
+  },
+  {
+    "trajectory_id": "traj_0003",
+    "domain_name": "airline",
+    "exploration_strategy": "seed_data",
+    "max_steps": 3,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2026-06-01T06:09:02.986163",
+        "tool_call": {
+          "id": "seed_17_17_0",
+          "name": "update_reservation_flights",
+          "arguments": {
+            "reservation_id": "FQ8APE",
+            "cabin": "economy",
+            "flights": [
+              {
+                "flight_number": "HAT056",
+                "date": "2024-05-25"
+              },
+              {
+                "flight_number": "HAT138",
+                "date": "2024-05-25"
+              }
+            ],
+            "payment_id": "gift_card_8190333"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_17_17_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2026-06-01T06:09:02.986164",
+        "tool_call": {
+          "id": "seed_17_17_1",
+          "name": "update_reservation_passengers",
+          "arguments": {
+            "reservation_id": "FQ8APE",
+            "passengers": [
+              {
+                "first_name": "Omar",
+                "last_name": "Rossi",
+                "dob": "1970-06-06"
+              }
+            ]
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_17_17_1",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 3,
+        "timestamp": "2026-06-01T06:09:02.986167",
+        "tool_call": {
+          "id": "seed_17_17_2",
+          "name": "update_reservation_baggages",
+          "arguments": {
+            "reservation_id": "FQ8APE",
+            "total_baggages": 3,
+            "nonfree_baggages": 0,
+            "payment_id": "gift_card_8190333"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_17_17_2",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2026-06-01T06:09:02.986169",
+    "end_time": "2026-06-01T06:09:02.986169",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "For your upcoming trip from New York to Chicago, you want to:\n- add 3 checked bags\n- change the passenger to yourself\n- upgrade it to economy class. \n\nMention all three things at once and in this order.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "Your name is Omar Rossi.\n\nYour user id is omar_rossi_1241."
+    },
+    "statistics": {
+      "total_steps": 3,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "update_reservation_flights": 1,
+        "update_reservation_passengers": 1,
+        "update_reservation_baggages": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "17",
+    "task_description": {
+      "reason_for_call": "For your upcoming trip from New York to Chicago, you want to:\n- add 3 checked bags\n- change the passenger to yourself\n- upgrade it to economy class. \n\nMention all three things at once and in this order.",
+      "known_info": "Your name is Omar Rossi.\n\nYour user id is omar_rossi_1241.",
+      "unknown_info": null
+    }
+  },
+  {
+    "trajectory_id": "traj_0004",
+    "domain_name": "airline",
+    "exploration_strategy": "seed_data",
+    "max_steps": 1,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2026-06-01T06:09:02.986173",
+        "tool_call": {
+          "id": "seed_15_15_0",
+          "name": "update_reservation_flights",
+          "arguments": {
+            "reservation_id": "M05KNL",
+            "cabin": "economy",
+            "flights": [
+              {
+                "flight_number": "HAT110",
+                "date": "2024-05-24"
+              },
+              {
+                "flight_number": "HAT172",
+                "date": "2024-05-24"
+              }
+            ],
+            "payment_id": "gift_card_8887175"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_15_15_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2026-06-01T06:09:02.986175",
+    "end_time": "2026-06-01T06:09:02.986176",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "For your upcoming trip from ATL to PHL, you want to change for the cheapest economy flight and for the day after the original reservation.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "Your name is Aarav Garcia.\n\nYour user id is aarav_garcia_1177."
+    },
+    "statistics": {
+      "total_steps": 1,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "update_reservation_flights": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "15",
+    "task_description": {
+      "reason_for_call": "For your upcoming trip from ATL to PHL, you want to change for the cheapest economy flight and for the day after the original reservation.",
+      "known_info": "Your name is Aarav Garcia.\n\nYour user id is aarav_garcia_1177.",
+      "unknown_info": null
+    }
+  },
+  {
+    "trajectory_id": "traj_0005",
+    "domain_name": "airline",
+    "exploration_strategy": "seed_data",
+    "max_steps": 2,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2026-06-01T06:09:02.986178",
+        "tool_call": {
+          "id": "seed_14_14_0",
+          "name": "cancel_reservation",
+          "arguments": {
+            "reservation_id": "K1NW8N"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_14_14_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2026-06-01T06:09:02.986180",
+        "tool_call": {
+          "id": "seed_14_14_1",
+          "name": "book_reservation",
+          "arguments": {
+            "user_id": "mohamed_silva_9265",
+            "origin": "JFK",
+            "destination": "SFO",
+            "flight_type": "round_trip",
+            "cabin": "business",
+            "flights": [
+              {
+                "flight_number": "HAT023",
+                "date": "2024-05-26"
+              },
+              {
+                "flight_number": "HAT204",
+                "date": "2024-05-28"
+              },
+              {
+                "flight_number": "HAT100",
+                "date": "2024-05-28"
+              }
+            ],
+            "passengers": [
+              {
+                "first_name": "Mohamed",
+                "last_name": "Silva",
+                "dob": "1960-11-26"
+              },
+              {
+                "first_name": "Raj",
+                "last_name": "Sanchez",
+                "dob": "1986-09-12"
+              },
+              {
+                "first_name": "Liam",
+                "last_name": "Wilson",
+                "dob": "1980-03-27"
+              }
+            ],
+            "payment_methods": [
+              {
+                "payment_id": "certificate_3765853",
+                "amount": 500
+              },
+              {
+                "payment_id": "gift_card_8020792",
+                "amount": 198
+              },
+              {
+                "payment_id": "gift_card_6136092",
+                "amount": 129
+              },
+              {
+                "payment_id": "credit_card_2198526",
+                "amount": 1786
+              }
+            ],
+            "total_baggages": 0,
+            "nonfree_baggages": 0,
+            "insurance": "no"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_14_14_1",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2026-06-01T06:09:02.986182",
+    "end_time": "2026-06-01T06:09:02.986183",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You want to know how much you have on your gift cards and certificates. Then you want to change your upcoming reservation.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "Your name is Mohamed Silva.\n\nYour user id is mohamed_silva_9265."
+    },
+    "statistics": {
+      "total_steps": 2,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "cancel_reservation": 1,
+        "book_reservation": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "14",
+    "task_description": {
+      "reason_for_call": "You want to know how much you have on your gift cards and certificates. Then you want to change your upcoming reservation.",
+      "known_info": "Your name is Mohamed Silva.\n\nYour user id is mohamed_silva_9265.",
+      "unknown_info": null
+    }
+  },
+  {
+    "trajectory_id": "traj_0006",
+    "domain_name": "airline",
+    "exploration_strategy": "seed_data",
+    "max_steps": 4,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2026-06-01T06:09:02.986187",
+        "tool_call": {
+          "id": "seed_8_8_0",
+          "name": "get_user_details",
+          "arguments": {
+            "user_id": "sophia_silva_7557"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_8_8_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2026-06-01T06:09:02.986190",
+        "tool_call": {
+          "id": "seed_8_8_1",
+          "name": "get_reservation_details",
+          "arguments": {
+            "reservation_id": "WUNA5K"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_8_8_1",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 3,
+        "timestamp": "2026-06-01T06:09:02.986191",
+        "tool_call": {
+          "id": "seed_8_8_2",
+          "name": "search_direct_flight",
+          "arguments": {
+            "origin": "ORD",
+            "destination": "PHL",
+            "date": "2024-05-26"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_8_8_2",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 4,
+        "timestamp": "2026-06-01T06:09:02.986192",
+        "tool_call": {
+          "id": "seed_8_8_3",
+          "name": "book_reservation",
+          "arguments": {
+            "user_id": "sophia_silva_7557",
+            "origin": "ORD",
+            "destination": "PHL",
+            "flight_type": "one_way",
+            "cabin": "economy",
+            "flights": [
+              {
+                "flight_number": "HAT271",
+                "date": "2024-05-26"
+              }
+            ],
+            "passengers": [
+              {
+                "first_name": "Sophia",
+                "last_name": "Silva",
+                "dob": "1957-10-05"
+              },
+              {
+                "first_name": "Kevin",
+                "last_name": "Smith",
+                "dob": "2001-04-12"
+              }
+            ],
+            "payment_methods": [
+              {
+                "payment_id": "certificate_8045380",
+                "amount": 348
+              }
+            ],
+            "total_baggages": 0,
+            "nonfree_baggages": 0,
+            "insurance": "no"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_8_8_3",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2026-06-01T06:09:02.986194",
+    "end_time": "2026-06-01T06:09:02.986195",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You want to book a one-way flight from ORD to PHL on May 26.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "Your name is Sophia Silva.\n\nYour user id is sophia_silva_7557."
+    },
+    "statistics": {
+      "total_steps": 4,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "get_user_details": 1,
+        "get_reservation_details": 1,
+        "search_direct_flight": 1,
+        "book_reservation": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "8",
+    "task_description": {
+      "reason_for_call": "You want to book a one-way flight from ORD to PHL on May 26.",
+      "known_info": "Your name is Sophia Silva.\n\nYour user id is sophia_silva_7557.",
+      "unknown_info": "You do not know the flight number of your May 10 flight from ORD to PHL"
+    }
+  },
+  {
+    "trajectory_id": "traj_0007",
+    "domain_name": "airline",
+    "exploration_strategy": "seed_data",
+    "max_steps": 1,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2026-06-01T06:09:02.986197",
+        "tool_call": {
+          "id": "seed_6_6_0",
+          "name": "get_reservation_details",
+          "arguments": {
+            "reservation_id": "PEP4E0"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_6_6_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2026-06-01T06:09:02.986199",
+    "end_time": "2026-06-01T06:09:02.986200",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You think that you've added insurance to your upcoming flight but it's not showing up online.\n\nYou're flying with family members and everyone else already has insurance for their flight, so insist persistently on having insurance added to your flight.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "Your user id is sophia_taylor_9065.\n\nThe reservation number is PEP4E0"
+    },
+    "statistics": {
+      "total_steps": 1,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "get_reservation_details": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "6",
+    "task_description": {
+      "reason_for_call": "You think that you've added insurance to your upcoming flight but it's not showing up online.\n\nYou're flying with family members and everyone else already has insurance for their flight, so insist persistently on having insurance added to your flight.",
+      "known_info": "Your user id is sophia_taylor_9065.\n\nThe reservation number is PEP4E0",
+      "unknown_info": null
+    }
+  },
+  {
+    "trajectory_id": "traj_0008",
+    "domain_name": "airline",
+    "exploration_strategy": "seed_data",
+    "max_steps": 0,
+    "steps": [],
+    "start_time": "2026-06-01T06:09:02.986202",
+    "end_time": "2026-06-01T06:09:02.986203",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You want to change your upcoming outgoing flight in reservation HXDUBJ to a nonstop flight on the next day (i.e. delay by one day). \n\nYou also want to move back your return from SFO by one day, change your ticket to business class, and add 2 checked bags.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You are Yara Garcia.\n\nYour user id is yara_garcia_1905."
+    },
+    "statistics": {
+      "total_steps": 0,
+      "success_rate": 1.0,
+      "tool_usage": {}
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "34",
+    "task_description": {
+      "reason_for_call": "You want to change your upcoming outgoing flight in reservation HXDUBJ to a nonstop flight on the next day (i.e. delay by one day). \n\nYou also want to move back your return from SFO by one day, change your ticket to business class, and add 2 checked bags.",
+      "known_info": "You are Yara Garcia.\n\nYour user id is yara_garcia_1905.",
+      "unknown_info": null
+    }
+  },
+  {
+    "trajectory_id": "traj_0009",
+    "domain_name": "airline",
+    "exploration_strategy": "seed_data",
+    "max_steps": 1,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2026-06-01T06:09:02.986205",
+        "tool_call": {
+          "id": "seed_5_5_0",
+          "name": "get_user_details",
+          "arguments": {
+            "user_id": "mei_brown_7075"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_5_5_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2026-06-01T06:09:02.986207",
+    "end_time": "2026-06-01T06:09:02.986208",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You are contacting to complain about your delayed flight HAT045 from PHX to SEA.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You are Mei Brown.\n\nYour user id is mei_brown_7075."
+    },
+    "statistics": {
+      "total_steps": 1,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "get_user_details": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "5",
+    "task_description": {
+      "reason_for_call": "You are contacting to complain about your delayed flight HAT045 from PHX to SEA.",
+      "known_info": "You are Mei Brown.\n\nYour user id is mei_brown_7075.",
+      "unknown_info": null
+    }
+  },
+  {
+    "trajectory_id": "traj_0010",
+    "domain_name": "airline",
+    "exploration_strategy": "seed_data",
+    "max_steps": 5,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2026-06-01T06:09:02.986211",
+        "tool_call": {
+          "id": "seed_37_37_0",
+          "name": "cancel_reservation",
+          "arguments": {
+            "reservation_id": "NQNU5R"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_37_37_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2026-06-01T06:09:02.986214",
+        "tool_call": {
+          "id": "seed_37_37_1",
+          "name": "get_reservation_details",
+          "arguments": {
+            "reservation_id": "M20IZO"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_37_37_1",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 3,
+        "timestamp": "2026-06-01T06:09:02.986215",
+        "tool_call": {
+          "id": "seed_37_37_2",
+          "name": "search_direct_flight",
+          "arguments": {
+            "origin": "JFK",
+            "destination": "ATL",
+            "date": "2024-05-22"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_37_37_2",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 4,
+        "timestamp": "2026-06-01T06:09:02.986216",
+        "tool_call": {
+          "id": "seed_37_37_3",
+          "name": "search_direct_flight",
+          "arguments": {
+            "origin": "ATL",
+            "destination": "MCO",
+            "date": "2024-05-22"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_37_37_3",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 5,
+        "timestamp": "2026-06-01T06:09:02.986218",
+        "tool_call": {
+          "id": "seed_37_37_4",
+          "name": "update_reservation_flights",
+          "arguments": {
+            "reservation_id": "M20IZO",
+            "cabin": "business",
+            "flights": [
+              {
+                "flight_number": "HAT268",
+                "date": "2024-05-22"
+              },
+              {
+                "flight_number": "HAT010",
+                "date": "2024-05-22"
+              }
+            ],
+            "payment_id": "credit_card_9074831"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_37_37_4",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2026-06-01T06:09:02.986219",
+    "end_time": "2026-06-01T06:09:02.986220",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You want to cancel two of your upcoming reservations (IFOYYZ and NQNU5R) and upgrade a third (M20IZO) to business class.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You are Aarav Ahmed.\nYour user id is aarav_ahmed_6699."
+    },
+    "statistics": {
+      "total_steps": 5,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "cancel_reservation": 1,
+        "get_reservation_details": 1,
+        "search_direct_flight": 2,
+        "update_reservation_flights": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "37",
+    "task_description": {
+      "reason_for_call": "You want to cancel two of your upcoming reservations (IFOYYZ and NQNU5R) and upgrade a third (M20IZO) to business class.",
+      "known_info": "You are Aarav Ahmed.\nYour user id is aarav_ahmed_6699.",
+      "unknown_info": null
+    }
+  },
+  {
+    "trajectory_id": "traj_0011",
+    "domain_name": "airline",
+    "exploration_strategy": "seed_data",
+    "max_steps": 2,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2026-06-01T06:09:02.986223",
+        "tool_call": {
+          "id": "seed_27_27_0",
+          "name": "get_user_details",
+          "arguments": {
+            "user_id": "ethan_martin_2396"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_27_27_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2026-06-01T06:09:02.986224",
+        "tool_call": {
+          "id": "seed_27_27_1",
+          "name": "send_certificate",
+          "arguments": {
+            "user_id": "ethan_martin_2396",
+            "amount": 150
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_27_27_1",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2026-06-01T06:09:02.986226",
+    "end_time": "2026-06-01T06:09:02.986227",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You are contacting customer service to complain about your delayed flight HAT039 from ATL to SEA.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You are Ethan Martin.\nYour user id is ethan_martin_2396."
+    },
+    "statistics": {
+      "total_steps": 2,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "get_user_details": 1,
+        "send_certificate": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "27",
+    "task_description": {
+      "reason_for_call": "You are contacting customer service to complain about your delayed flight HAT039 from ATL to SEA.",
+      "known_info": "You are Ethan Martin.\nYour user id is ethan_martin_2396.",
+      "unknown_info": null
+    }
+  },
+  {
+    "trajectory_id": "traj_0012",
+    "domain_name": "airline",
+    "exploration_strategy": "seed_data",
+    "max_steps": 4,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2026-06-01T06:09:02.986229",
+        "tool_call": {
+          "id": "seed_2_2_0",
+          "name": "get_user_details",
+          "arguments": {
+            "user_id": "noah_muller_9847"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_2_2_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2026-06-01T06:09:02.986230",
+        "tool_call": {
+          "id": "seed_2_2_1",
+          "name": "get_reservation_details",
+          "arguments": {
+            "reservation_id": "SDZQKO"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_2_2_1",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 3,
+        "timestamp": "2026-06-01T06:09:02.986232",
+        "tool_call": {
+          "id": "seed_2_2_2",
+          "name": "get_reservation_details",
+          "arguments": {
+            "reservation_id": "4OG6T3"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_2_2_2",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 4,
+        "timestamp": "2026-06-01T06:09:02.986235",
+        "tool_call": {
+          "id": "seed_2_2_3",
+          "name": "send_certificate",
+          "arguments": {
+            "user_id": "noah_muller_9847",
+            "amount": 50
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_2_2_3",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2026-06-01T06:09:02.986237",
+    "end_time": "2026-06-01T06:09:02.986237",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "First, try to book a flight from sf to ny. \n\nYou will have 3 passengers.\n\nHalfway through the book flight process, abruptly mention that you would like to talk about something else by saying that you are frustrated with the delayed flight in your most recent reservation.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You are Noah Muller.\nYour user id is noah_muller_9847."
+    },
+    "statistics": {
+      "total_steps": 4,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "get_user_details": 1,
+        "get_reservation_details": 2,
+        "send_certificate": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "2",
+    "task_description": {
+      "reason_for_call": "First, try to book a flight from sf to ny. \n\nYou will have 3 passengers.\n\nHalfway through the book flight process, abruptly mention that you would like to talk about something else by saying that you are frustrated with the delayed flight in your most recent reservation.",
+      "known_info": "You are Noah Muller.\nYour user id is noah_muller_9847.",
+      "unknown_info": null
+    }
+  },
+  {
+    "trajectory_id": "traj_0013",
+    "domain_name": "airline",
+    "exploration_strategy": "seed_data",
+    "max_steps": 1,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2026-06-01T06:09:02.986241",
+        "tool_call": {
+          "id": "seed_47_47_0",
+          "name": "get_reservation_details",
+          "arguments": {
+            "reservation_id": "H8Q05L"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_47_47_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2026-06-01T06:09:02.986242",
+    "end_time": "2026-06-01T06:09:02.986243",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You want to cancel your flight  because the flight coincides with your best friend's birthday.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You are Sophia Silva.\nYour user id is sophia_silva_7557.\nConfirmation number: H8Q05L"
+    },
+    "statistics": {
+      "total_steps": 1,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "get_reservation_details": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "47",
+    "task_description": {
+      "reason_for_call": "You want to cancel your flight  because the flight coincides with your best friend's birthday.",
+      "known_info": "You are Sophia Silva.\nYour user id is sophia_silva_7557.\nConfirmation number: H8Q05L",
+      "unknown_info": null
+    }
+  },
+  {
+    "trajectory_id": "traj_0014",
+    "domain_name": "airline",
+    "exploration_strategy": "seed_data",
+    "max_steps": 1,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2026-06-01T06:09:02.986249",
+        "tool_call": {
+          "id": "seed_49_49_0",
+          "name": "get_reservation_details",
+          "arguments": {
+            "reservation_id": "3RK2T9"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_49_49_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2026-06-01T06:09:02.986250",
+    "end_time": "2026-06-01T06:09:02.986251",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You booked the flight and you also purchased insurance for it. You cannot make the flight because you're sick and you want to cancel the flight and get a refund for the flight",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You are Anya Garcia.\nYour user id is anya_garcia_5901. \n\nYour confirmation number is 3RK2T9."
+    },
+    "statistics": {
+      "total_steps": 1,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "get_reservation_details": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "49",
+    "task_description": {
+      "reason_for_call": "You booked the flight and you also purchased insurance for it. You cannot make the flight because you're sick and you want to cancel the flight and get a refund for the flight",
+      "known_info": "You are Anya Garcia.\nYour user id is anya_garcia_5901. \n\nYour confirmation number is 3RK2T9.",
+      "unknown_info": null
+    }
+  },
+  {
+    "trajectory_id": "traj_0015",
+    "domain_name": "airline",
+    "exploration_strategy": "seed_data",
+    "max_steps": 1,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2026-06-01T06:09:02.986253",
+        "tool_call": {
+          "id": "seed_13_13_0",
+          "name": "transfer_to_human_agents",
+          "arguments": {
+            "summary": "User wants to change my upcoming one stop flight from ATL to LAX within reservation XEWRD9 to a nonstop flight from ATL to LAS (Las Vegas). Origin and destination of a reservation cannot be modified."
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_13_13_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2026-06-01T06:09:02.986255",
+    "end_time": "2026-06-01T06:09:02.986255",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You want to change your upcoming one stop return flight from ATL to LAX to a nonstop flight from ATL to LAS (Las Vegas).",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "Your name is James Lee.\n\nYour user id is james_lee_6136. \n\nYour reservation number is XEWRD9"
+    },
+    "statistics": {
+      "total_steps": 1,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "transfer_to_human_agents": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "13",
+    "task_description": {
+      "reason_for_call": "You want to change your upcoming one stop return flight from ATL to LAX to a nonstop flight from ATL to LAS (Las Vegas).",
+      "known_info": "Your name is James Lee.\n\nYour user id is james_lee_6136. \n\nYour reservation number is XEWRD9",
+      "unknown_info": null
+    }
+  },
+  {
+    "trajectory_id": "traj_0016",
+    "domain_name": "airline",
+    "exploration_strategy": "seed_data",
+    "max_steps": 20,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2026-06-01T06:09:02.986258",
+        "tool_call": {
+          "id": "seed_44_44_0",
+          "name": "get_user_details",
+          "arguments": {
+            "user_id": "sophia_silva_7557"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_44_44_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2026-06-01T06:09:02.986259",
+        "tool_call": {
+          "id": "seed_44_44_1",
+          "name": "get_reservation_details",
+          "arguments": {
+            "reservation_id": "NM1VX1"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_44_44_1",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 3,
+        "timestamp": "2026-06-01T06:09:02.986261",
+        "tool_call": {
+          "id": "seed_44_44_2",
+          "name": "get_reservation_details",
+          "arguments": {
+            "reservation_id": "KC18K6"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_44_44_2",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 4,
+        "timestamp": "2026-06-01T06:09:02.986263",
+        "tool_call": {
+          "id": "seed_44_44_3",
+          "name": "get_reservation_details",
+          "arguments": {
+            "reservation_id": "S61CZX"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_44_44_3",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 5,
+        "timestamp": "2026-06-01T06:09:02.986433",
+        "tool_call": {
+          "id": "seed_44_44_4",
+          "name": "get_reservation_details",
+          "arguments": {
+            "reservation_id": "H8Q05L"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_44_44_4",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 6,
+        "timestamp": "2026-06-01T06:09:02.986436",
+        "tool_call": {
+          "id": "seed_44_44_5",
+          "name": "get_reservation_details",
+          "arguments": {
+            "reservation_id": "WUNA5K"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_44_44_5",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 7,
+        "timestamp": "2026-06-01T06:09:02.986438",
+        "tool_call": {
+          "id": "seed_44_44_6",
+          "name": "search_direct_flight",
+          "arguments": {
+            "origin": "MSP",
+            "destination": "EWR",
+            "date": "2024-05-25"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_44_44_6",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 8,
+        "timestamp": "2026-06-01T06:09:02.986440",
+        "tool_call": {
+          "id": "seed_44_44_7",
+          "name": "search_direct_flight",
+          "arguments": {
+            "origin": "EWR",
+            "destination": "MSP",
+            "date": "2024-05-27"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_44_44_7",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 9,
+        "timestamp": "2026-06-01T06:09:02.986441",
+        "tool_call": {
+          "id": "seed_44_44_8",
+          "name": "search_direct_flight",
+          "arguments": {
+            "origin": "MSP",
+            "destination": "EWR",
+            "date": "2024-05-21"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_44_44_8",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 10,
+        "timestamp": "2026-06-01T06:09:02.986443",
+        "tool_call": {
+          "id": "seed_44_44_9",
+          "name": "search_direct_flight",
+          "arguments": {
+            "origin": "EWR",
+            "destination": "CLT",
+            "date": "2024-05-21"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_44_44_9",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 11,
+        "timestamp": "2026-06-01T06:09:02.986445",
+        "tool_call": {
+          "id": "seed_44_44_10",
+          "name": "search_direct_flight",
+          "arguments": {
+            "origin": "LAX",
+            "destination": "EWR",
+            "date": "2024-05-23"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_44_44_10",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 12,
+        "timestamp": "2026-06-01T06:09:02.986446",
+        "tool_call": {
+          "id": "seed_44_44_11",
+          "name": "search_direct_flight",
+          "arguments": {
+            "origin": "EWR",
+            "destination": "CLT",
+            "date": "2024-05-24"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_44_44_11",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 13,
+        "timestamp": "2026-06-01T06:09:02.986447",
+        "tool_call": {
+          "id": "seed_44_44_12",
+          "name": "search_direct_flight",
+          "arguments": {
+            "origin": "CLT",
+            "destination": "EWR",
+            "date": "2024-05-24"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_44_44_12",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 14,
+        "timestamp": "2026-06-01T06:09:02.986449",
+        "tool_call": {
+          "id": "seed_44_44_13",
+          "name": "search_direct_flight",
+          "arguments": {
+            "origin": "EWR",
+            "destination": "LAX",
+            "date": "2024-05-25"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_44_44_13",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 15,
+        "timestamp": "2026-06-01T06:09:02.986451",
+        "tool_call": {
+          "id": "seed_44_44_14",
+          "name": "search_direct_flight",
+          "arguments": {
+            "origin": "JFK",
+            "destination": "ATL",
+            "date": "2024-05-24"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_44_44_14",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 16,
+        "timestamp": "2026-06-01T06:09:02.986454",
+        "tool_call": {
+          "id": "seed_44_44_15",
+          "name": "search_direct_flight",
+          "arguments": {
+            "origin": "ORD",
+            "destination": "PHL",
+            "date": "2024-05-10"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_44_44_15",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 17,
+        "timestamp": "2026-06-01T06:09:02.986455",
+        "tool_call": {
+          "id": "seed_44_44_16",
+          "name": "cancel_reservation",
+          "arguments": {
+            "reservation_id": "S61CZX"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_44_44_16",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 18,
+        "timestamp": "2026-06-01T06:09:02.986456",
+        "tool_call": {
+          "id": "seed_44_44_17",
+          "name": "update_reservation_flights",
+          "arguments": {
+            "reservation_id": "NM1VX1",
+            "cabin": "business",
+            "flights": [
+              {
+                "flight_number": "HAT300",
+                "date": "2024-05-25"
+              },
+              {
+                "flight_number": "HAT208",
+                "date": "2024-05-27"
+              }
+            ],
+            "payment_id": "credit_card_4196779"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_44_44_17",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 19,
+        "timestamp": "2026-06-01T06:09:02.986458",
+        "tool_call": {
+          "id": "seed_44_44_18",
+          "name": "update_reservation_flights",
+          "arguments": {
+            "reservation_id": "H8Q05L",
+            "cabin": "business",
+            "flights": [
+              {
+                "flight_number": "HAT268",
+                "date": "2024-05-24"
+              }
+            ],
+            "payment_id": "credit_card_4196779"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_44_44_18",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 20,
+        "timestamp": "2026-06-01T06:09:02.986459",
+        "tool_call": {
+          "id": "seed_44_44_19",
+          "name": "update_reservation_flights",
+          "arguments": {
+            "reservation_id": "KC18K6",
+            "cabin": "business",
+            "flights": [
+              {
+                "flight_number": "HAT300",
+                "date": "2024-05-21"
+              },
+              {
+                "flight_number": "HAT215",
+                "date": "2024-05-21"
+              }
+            ],
+            "payment_id": "credit_card_4196779"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_44_44_19",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2026-06-01T06:09:02.986461",
+    "end_time": "2026-06-01T06:09:02.986461",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You want to cancel all your future reservations that contain any flights that are longer than 4 hours. \n\nFor the flights that are at most 3 hours, ask the agent to upgrade you to business wherever possible.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You are Sophia Silva.\nYour user id is sophia_silva_7557."
+    },
+    "statistics": {
+      "total_steps": 20,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "get_user_details": 1,
+        "get_reservation_details": 5,
+        "search_direct_flight": 10,
+        "cancel_reservation": 1,
+        "update_reservation_flights": 3
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "44",
+    "task_description": {
+      "reason_for_call": "You want to cancel all your future reservations that contain any flights that are longer than 4 hours. \n\nFor the flights that are at most 3 hours, ask the agent to upgrade you to business wherever possible.",
+      "known_info": "You are Sophia Silva.\nYour user id is sophia_silva_7557.",
+      "unknown_info": null
+    }
+  },
+  {
+    "trajectory_id": "traj_0017",
+    "domain_name": "airline",
+    "exploration_strategy": "seed_data",
+    "max_steps": 5,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2026-06-01T06:09:02.986468",
+        "tool_call": {
+          "id": "seed_32_32_0",
+          "name": "get_user_details",
+          "arguments": {
+            "user_id": "ivan_rossi_8555"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_32_32_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2026-06-01T06:09:02.986470",
+        "tool_call": {
+          "id": "seed_32_32_1",
+          "name": "get_reservation_details",
+          "arguments": {
+            "reservation_id": "OWZ4XL"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_32_32_1",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 3,
+        "timestamp": "2026-06-01T06:09:02.986471",
+        "tool_call": {
+          "id": "seed_32_32_2",
+          "name": "search_direct_flight",
+          "arguments": {
+            "origin": "EWR",
+            "destination": "LAX",
+            "date": "2024-05-21"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_32_32_2",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 4,
+        "timestamp": "2026-06-01T06:09:02.986472",
+        "tool_call": {
+          "id": "seed_32_32_3",
+          "name": "update_reservation_flights",
+          "arguments": {
+            "reservation_id": "OWZ4XL",
+            "cabin": "economy",
+            "flights": [
+              {
+                "flight_number": "HAT202",
+                "date": "2024-05-21"
+              },
+              {
+                "flight_number": "HAT232",
+                "date": "2024-05-21"
+              }
+            ],
+            "payment_id": "credit_card_9659780"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_32_32_3",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 5,
+        "timestamp": "2026-06-01T06:09:02.986475",
+        "tool_call": {
+          "id": "seed_32_32_4",
+          "name": "update_reservation_flights",
+          "arguments": {
+            "reservation_id": "OWZ4XL",
+            "cabin": "economy",
+            "flights": [
+              {
+                "flight_number": "HAT041",
+                "date": "2024-05-21"
+              }
+            ],
+            "payment_id": "credit_card_9659780"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_32_32_4",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2026-06-01T06:09:02.986477",
+    "end_time": "2026-06-01T06:09:02.986477",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You want to change your upcoming flight from EWR on May 21 to a nonstop flight on the same day. \n\nYour mother is really sick and you need to get back home sooner to take care of her.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You are Ivan Rossi.\nYour user id is ivan_rossi_8555."
+    },
+    "statistics": {
+      "total_steps": 5,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "get_user_details": 1,
+        "get_reservation_details": 1,
+        "search_direct_flight": 1,
+        "update_reservation_flights": 2
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "32",
+    "task_description": {
+      "reason_for_call": "You want to change your upcoming flight from EWR on May 21 to a nonstop flight on the same day. \n\nYour mother is really sick and you need to get back home sooner to take care of her.",
+      "known_info": "You are Ivan Rossi.\nYour user id is ivan_rossi_8555.",
+      "unknown_info": null
+    }
+  },
+  {
+    "trajectory_id": "traj_0018",
+    "domain_name": "airline",
+    "exploration_strategy": "seed_data",
+    "max_steps": 1,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2026-06-01T06:09:02.986480",
+        "tool_call": {
+          "id": "seed_36_36_0",
+          "name": "get_reservation_details",
+          "arguments": {
+            "reservation_id": "EUJUY6"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_36_36_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2026-06-01T06:09:02.986482",
+    "end_time": "2026-06-01T06:09:02.986483",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You want to change the date of a flight in reservation EUJUY6. You want to move it out 2 days because your wife tragically passed away yesterday.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You are Lucas Brown.\nYour user id is lucas_brown_4047."
+    },
+    "statistics": {
+      "total_steps": 1,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "get_reservation_details": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "36",
+    "task_description": {
+      "reason_for_call": "You want to change the date of a flight in reservation EUJUY6. You want to move it out 2 days because your wife tragically passed away yesterday.",
+      "known_info": "You are Lucas Brown.\nYour user id is lucas_brown_4047.",
+      "unknown_info": null
+    }
+  },
+  {
+    "trajectory_id": "traj_0019",
+    "domain_name": "airline",
+    "exploration_strategy": "seed_data",
+    "max_steps": 0,
+    "steps": [],
+    "start_time": "2026-06-01T06:09:02.986485",
+    "end_time": "2026-06-01T06:09:02.986485",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You want to get a refund for the insurance you purchased for your flight  but you don't want to cancel the flight itself.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You are Sophia Silva.\nYour user id is sophia_silva_7557.\nReservation confirmation number is H8Q05L."
+    },
+    "statistics": {
+      "total_steps": 0,
+      "success_rate": 1.0,
+      "tool_usage": {}
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "46",
+    "task_description": {
+      "reason_for_call": "You want to get a refund for the insurance you purchased for your flight  but you don't want to cancel the flight itself.",
+      "known_info": "You are Sophia Silva.\nYour user id is sophia_silva_7557.\nReservation confirmation number is H8Q05L.",
+      "unknown_info": null
+    }
+  }
+]

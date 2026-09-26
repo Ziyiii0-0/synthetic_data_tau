@@ -1,0 +1,302 @@
+[
+  {
+    "trajectory_id": "traj_0028",
+    "description": {
+      "purpose": null,
+      "relevant_policies": null,
+      "notes": null
+    },
+    "user_scenario": {
+      "persona": null,
+      "instructions": {
+        "task_instructions": ".",
+        "domain": "retail_explore",
+        "reason_for_call": "You received your order #W1880131 and want to exchange the Selmer tenor saxophone for another one of the same model because the one you received has an issue or defect.",
+        "known_info": "You know your email address is emma.schmidt2108@example.com and your order number is #W1880131.",
+        "unknown_info": "You do not remember your zip code."
+      }
+    },
+    "initial_state": null,
+    "evaluation_criteria": {
+      "actions": [
+        {
+          "action_id": "0_0",
+          "name": "find_user_id_by_email",
+          "arguments": {
+            "email": "emma.schmidt2108@example.com"
+          },
+          "info": null
+        },
+        {
+          "action_id": "0_1",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W1880131"
+          },
+          "info": null
+        },
+        {
+          "action_id": "0_2",
+          "name": "exchange_delivered_order_items",
+          "arguments": {
+            "order_id": "#W1880131",
+            "item_ids": [
+              "8039379729"
+            ],
+            "new_item_ids": [
+              "8039379729"
+            ],
+            "payment_method_id": "paypal_7569951"
+          },
+          "info": null
+        }
+      ],
+      "communicate_info": [],
+      "nl_assertions": null
+    },
+    "id": "traj_0028"
+  },
+  {
+    "trajectory_id": "traj_0043",
+    "description": {
+      "purpose": null,
+      "relevant_policies": null,
+      "notes": null
+    },
+    "user_scenario": {
+      "persona": null,
+      "instructions": {
+        "task_instructions": ".",
+        "domain": "retail_explore",
+        "reason_for_call": "You received your order #W8665878 and want to exchange the 8-inch stainless steel frying pan with plastic handle for a 10-inch cast iron frying pan with plastic handle. You also want to know the price difference for this exchange.",
+        "known_info": "You know your email address is aiden.choi7315@example.com.",
+        "unknown_info": "You do not remember your zip code."
+      }
+    },
+    "initial_state": null,
+    "evaluation_criteria": {
+      "actions": [
+        {
+          "action_id": "0_0",
+          "name": "find_user_id_by_email",
+          "arguments": {
+            "email": "aiden.choi7315@example.com"
+          },
+          "info": null
+        },
+        {
+          "action_id": "0_1",
+          "name": "get_user_details",
+          "arguments": {
+            "user_id": "aiden_choi_1916"
+          },
+          "info": null
+        },
+        {
+          "action_id": "0_2",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W8665878"
+          },
+          "info": null
+        },
+        {
+          "action_id": "0_3",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W3575941"
+          },
+          "info": null
+        },
+        {
+          "action_id": "0_4",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W4724534"
+          },
+          "info": null
+        },
+        {
+          "action_id": "0_5",
+          "name": "list_all_product_types",
+          "arguments": {},
+          "info": null
+        },
+        {
+          "action_id": "0_6",
+          "name": "get_product_details",
+          "arguments": {
+            "product_id": "8036619139"
+          },
+          "info": null
+        },
+        {
+          "action_id": "0_7",
+          "name": "calculate",
+          "arguments": {
+            "expression": "32.18 - 26.71"
+          },
+          "info": null
+        },
+        {
+          "action_id": "0_8",
+          "name": "exchange_delivered_order_items",
+          "arguments": {
+            "order_id": "#W8665878",
+            "item_ids": [
+              "4951452432"
+            ],
+            "new_item_ids": [
+              "6619177963"
+            ],
+            "payment_method_id": "paypal_4334976"
+          },
+          "info": null
+        }
+      ],
+      "communicate_info": [
+        "5.47"
+      ],
+      "nl_assertions": null
+    },
+    "id": "traj_0043"
+  },
+  {
+    "trajectory_id": "traj_0052",
+    "description": {
+      "purpose": null,
+      "relevant_policies": null,
+      "notes": null
+    },
+    "user_scenario": {
+      "persona": null,
+      "instructions": {
+        "task_instructions": ".",
+        "domain": "retail_explore",
+        "reason_for_call": "You received your order #W4757190 and want to exchange the Rubik's Cube for the same item because it arrived defective or damaged.",
+        "known_info": "You know your email address is jose.simmons9178@example.com.",
+        "unknown_info": "You do not remember your zip code."
+      }
+    },
+    "initial_state": null,
+    "evaluation_criteria": {
+      "actions": [
+        {
+          "action_id": "0_0",
+          "name": "find_user_id_by_email",
+          "arguments": {
+            "email": "jose.simmons9178@example.com"
+          },
+          "info": null
+        },
+        {
+          "action_id": "0_1",
+          "name": "get_user_details",
+          "arguments": {
+            "user_id": "jose_simmons_1135"
+          },
+          "info": null
+        },
+        {
+          "action_id": "0_2",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W4497356"
+          },
+          "info": null
+        },
+        {
+          "action_id": "0_3",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W4757190"
+          },
+          "info": null
+        },
+        {
+          "action_id": "0_4",
+          "name": "exchange_delivered_order_items",
+          "arguments": {
+            "order_id": "#W4757190",
+            "item_ids": [
+              "3607839038"
+            ],
+            "new_item_ids": [
+              "3607839038"
+            ],
+            "payment_method_id": "gift_card_9029963"
+          },
+          "info": null
+        }
+      ],
+      "communicate_info": [],
+      "nl_assertions": null
+    },
+    "id": "traj_0052"
+  },
+  {
+    "trajectory_id": "traj_0075",
+    "description": {
+      "purpose": null,
+      "relevant_policies": null,
+      "notes": null
+    },
+    "user_scenario": {
+      "persona": null,
+      "instructions": {
+        "task_instructions": ".",
+        "domain": "retail_explore",
+        "reason_for_call": "You received your order #W5438032 and want to exchange the picture frame for the same picture frame because the one you received is defective or damaged.",
+        "known_info": "You know your email address is imani.jenkins9446@example.com.",
+        "unknown_info": "You do not remember your zip code."
+      }
+    },
+    "initial_state": null,
+    "evaluation_criteria": {
+      "actions": [
+        {
+          "action_id": "0_0",
+          "name": "find_user_id_by_email",
+          "arguments": {
+            "email": "imani.jenkins9446@example.com"
+          },
+          "info": null
+        },
+        {
+          "action_id": "0_1",
+          "name": "get_user_details",
+          "arguments": {
+            "user_id": "imani_jenkins_2028"
+          },
+          "info": null
+        },
+        {
+          "action_id": "0_2",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W5438032"
+          },
+          "info": null
+        },
+        {
+          "action_id": "0_3",
+          "name": "exchange_delivered_order_items",
+          "arguments": {
+            "order_id": "#W5438032",
+            "item_ids": [
+              "3045624389"
+            ],
+            "new_item_ids": [
+              "3045624389"
+            ],
+            "payment_method_id": "credit_card_9639022"
+          },
+          "info": null
+        }
+      ],
+      "communicate_info": [],
+      "nl_assertions": null
+    },
+    "id": "traj_0075"
+  }
+]

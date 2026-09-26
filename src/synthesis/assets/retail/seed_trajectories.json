@@ -1,0 +1,3749 @@
+[
+  {
+    "trajectory_id": "traj_0000",
+    "domain_name": "retail",
+    "exploration_strategy": "seed_data",
+    "max_steps": 2,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2025-11-25T23:26:49.378250",
+        "tool_call": {
+          "id": "seed_81_81_0",
+          "name": "cancel_pending_order",
+          "arguments": {
+            "order_id": "#W3289292",
+            "reason": "no longer needed"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_81_81_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2025-11-25T23:26:49.378257",
+        "tool_call": {
+          "id": "seed_81_81_1",
+          "name": "cancel_pending_order",
+          "arguments": {
+            "order_id": "#W9722559",
+            "reason": "no longer needed"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_81_81_1",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2025-11-25T23:26:49.378261",
+    "end_time": "2025-11-25T23:26:49.378262",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "Due to some life changes, you no longer need hiking boots, watch, keyboard, charger, jacket, and running shoes. If cancelling part of the order is not possible, you don't care, just cancel the whole order.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You name is James Kim and your email is james.kim1995@example.com."
+    },
+    "statistics": {
+      "total_steps": 2,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "cancel_pending_order": 2
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "81",
+    "task_description": {
+      "reason_for_call": "Due to some life changes, you no longer need hiking boots, watch, keyboard, charger, jacket, and running shoes. If cancelling part of the order is not possible, you don't care, just cancel the whole order.",
+      "known_info": "You name is James Kim and your email is james.kim1995@example.com.",
+      "unknown_info": null
+    }
+  },
+  {
+    "trajectory_id": "traj_0001",
+    "domain_name": "retail",
+    "exploration_strategy": "seed_data",
+    "max_steps": 6,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2025-11-25T23:26:49.378268",
+        "tool_call": {
+          "id": "seed_14_14_0",
+          "name": "find_user_id_by_email",
+          "arguments": {
+            "email": "mia.garcia2723@example.com"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_14_14_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2025-11-25T23:26:49.378273",
+        "tool_call": {
+          "id": "seed_14_14_1",
+          "name": "get_user_details",
+          "arguments": {
+            "user_id": "mia_garcia_4516"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_14_14_1",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 3,
+        "timestamp": "2025-11-25T23:26:49.378276",
+        "tool_call": {
+          "id": "seed_14_14_2",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W5490111"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_14_14_2",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 4,
+        "timestamp": "2025-11-25T23:26:49.378278",
+        "tool_call": {
+          "id": "seed_14_14_3",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W7387996"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_14_14_3",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 5,
+        "timestamp": "2025-11-25T23:26:49.378279",
+        "tool_call": {
+          "id": "seed_14_14_4",
+          "name": "return_delivered_order_items",
+          "arguments": {
+            "order_id": "#W5490111",
+            "item_ids": [
+              "1421289881"
+            ],
+            "payment_method_id": "credit_card_3124723"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_14_14_4",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 6,
+        "timestamp": "2025-11-25T23:26:49.378280",
+        "tool_call": {
+          "id": "seed_14_14_5",
+          "name": "return_delivered_order_items",
+          "arguments": {
+            "order_id": "#W7387996",
+            "item_ids": [
+              "5796612084"
+            ],
+            "payment_method_id": "paypal_9497703"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_14_14_5",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2025-11-25T23:26:49.378282",
+    "end_time": "2025-11-25T23:26:49.378283",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You just quit gaming and want to cancel or return everything associated with it. (It's just a keyboard and a mouse, but do not reveal it to the agent). Original payment is preferred.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You are mia_garcia_4516 with email mia.garcia2723@example.com"
+    },
+    "statistics": {
+      "total_steps": 6,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "find_user_id_by_email": 1,
+        "get_user_details": 1,
+        "get_order_details": 2,
+        "return_delivered_order_items": 2
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "14",
+    "task_description": {
+      "reason_for_call": "You just quit gaming and want to cancel or return everything associated with it. (It's just a keyboard and a mouse, but do not reveal it to the agent). Original payment is preferred.",
+      "known_info": "You are mia_garcia_4516 with email mia.garcia2723@example.com",
+      "unknown_info": null
+    }
+  },
+  {
+    "trajectory_id": "traj_0002",
+    "domain_name": "retail",
+    "exploration_strategy": "seed_data",
+    "max_steps": 12,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2025-11-25T23:26:49.378288",
+        "tool_call": {
+          "id": "seed_3_3_0",
+          "name": "find_user_id_by_name_zip",
+          "arguments": {
+            "first_name": "Yusuf",
+            "last_name": "Rossi",
+            "zip": "19122"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_3_3_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2025-11-25T23:26:49.378290",
+        "tool_call": {
+          "id": "seed_3_3_1",
+          "name": "get_product_details",
+          "arguments": {
+            "product_id": "6086499569"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_3_3_1",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 3,
+        "timestamp": "2025-11-25T23:26:49.378293",
+        "tool_call": {
+          "id": "seed_3_3_3",
+          "name": "get_product_details",
+          "arguments": {
+            "product_id": "9523456873"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_3_3_3",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 4,
+        "timestamp": "2025-11-25T23:26:49.378295",
+        "tool_call": {
+          "id": "seed_3_3_4",
+          "name": "get_user_details",
+          "arguments": {
+            "user_id": "yusuf_rossi_9620"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_3_3_4",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 5,
+        "timestamp": "2025-11-25T23:26:49.378302",
+        "tool_call": {
+          "id": "seed_3_3_5",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W6247578"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_3_3_5",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 6,
+        "timestamp": "2025-11-25T23:26:49.378304",
+        "tool_call": {
+          "id": "seed_3_3_6",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W9711842"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_3_3_6",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 7,
+        "timestamp": "2025-11-25T23:26:49.378305",
+        "tool_call": {
+          "id": "seed_3_3_7",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W4776164"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_3_3_7",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 8,
+        "timestamp": "2025-11-25T23:26:49.378306",
+        "tool_call": {
+          "id": "seed_3_3_8",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W6679257"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_3_3_8",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 9,
+        "timestamp": "2025-11-25T23:26:49.378307",
+        "tool_call": {
+          "id": "seed_3_3_9",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W2378156"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_3_3_9",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 10,
+        "timestamp": "2025-11-25T23:26:49.378309",
+        "tool_call": {
+          "id": "seed_3_3_10",
+          "name": "get_product_details",
+          "arguments": {
+            "product_id": "9523456873"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_3_3_10",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 11,
+        "timestamp": "2025-11-25T23:26:49.378310",
+        "tool_call": {
+          "id": "seed_3_3_11",
+          "name": "get_user_details",
+          "arguments": {
+            "user_id": "yusuf_rossi_9620"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_3_3_11",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 12,
+        "timestamp": "2025-11-25T23:26:49.378312",
+        "tool_call": {
+          "id": "seed_3_3_12",
+          "name": "modify_pending_order_items",
+          "arguments": {
+            "order_id": "#W4776164",
+            "item_ids": [
+              "8349118980"
+            ],
+            "new_item_ids": [
+              "9647292434"
+            ],
+            "payment_method_id": "credit_card_9513926"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_3_3_12",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2025-11-25T23:26:49.378313",
+    "end_time": "2025-11-25T23:26:49.378314",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You want to know how many tshirt options are available in the online store right now. You want to modify all your pending small tshirt to purple, same size, same v-neck, and prefer polyester.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You are Yusuf Rossi in zipcode 19122."
+    },
+    "statistics": {
+      "total_steps": 12,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "find_user_id_by_name_zip": 1,
+        "get_product_details": 3,
+        "get_user_details": 2,
+        "get_order_details": 5,
+        "modify_pending_order_items": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "3",
+    "task_description": {
+      "reason_for_call": "You want to know how many tshirt options are available in the online store right now. You want to modify all your pending small tshirt to purple, same size, same v-neck, and prefer polyester.",
+      "known_info": "You are Yusuf Rossi in zipcode 19122.",
+      "unknown_info": "You do not remember your email address"
+    }
+  },
+  {
+    "trajectory_id": "traj_0003",
+    "domain_name": "retail",
+    "exploration_strategy": "seed_data",
+    "max_steps": 1,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2025-11-25T23:26:49.378318",
+        "tool_call": {
+          "id": "seed_94_94_0",
+          "name": "exchange_delivered_order_items",
+          "arguments": {
+            "order_id": "#W2905754",
+            "item_ids": [
+              "3478699712"
+            ],
+            "new_item_ids": [
+              "9844888101"
+            ],
+            "payment_method_id": "credit_card_3677959"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_94_94_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2025-11-25T23:26:49.378320",
+    "end_time": "2025-11-25T23:26:49.378321",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You received a laptop and you want to exchange it to i7 processor, 8GB, 1TB SSD. If the agent asks for which laptop, it is 15-inch, 16GB.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You name is Lei Wilson and your zip code is 32255."
+    },
+    "statistics": {
+      "total_steps": 1,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "exchange_delivered_order_items": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "94",
+    "task_description": {
+      "reason_for_call": "You received a laptop and you want to exchange it to i7 processor, 8GB, 1TB SSD. If the agent asks for which laptop, it is 15-inch, 16GB.",
+      "known_info": "You name is Lei Wilson and your zip code is 32255.",
+      "unknown_info": "You do not remember your email address"
+    }
+  },
+  {
+    "trajectory_id": "traj_0004",
+    "domain_name": "retail",
+    "exploration_strategy": "seed_data",
+    "max_steps": 7,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2025-11-25T23:26:49.378325",
+        "tool_call": {
+          "id": "seed_35_35_0",
+          "name": "find_user_id_by_email",
+          "arguments": {
+            "email": "aarav.santos8321@example.com"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_35_35_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2025-11-25T23:26:49.378327",
+        "tool_call": {
+          "id": "seed_35_35_1",
+          "name": "find_user_id_by_email",
+          "arguments": {
+            "email": "aarav.santos8320@example.com"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_35_35_1",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 3,
+        "timestamp": "2025-11-25T23:26:49.378330",
+        "tool_call": {
+          "id": "seed_35_35_2",
+          "name": "get_user_details",
+          "arguments": {
+            "user_id": "aarav_santos_2259"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_35_35_2",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 4,
+        "timestamp": "2025-11-25T23:26:49.378331",
+        "tool_call": {
+          "id": "seed_35_35_3",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W9672333"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_35_35_3",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 5,
+        "timestamp": "2025-11-25T23:26:49.378332",
+        "tool_call": {
+          "id": "seed_35_35_4",
+          "name": "get_product_details",
+          "arguments": {
+            "product_id": "4760268021"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_35_35_4",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 6,
+        "timestamp": "2025-11-25T23:26:49.378334",
+        "tool_call": {
+          "id": "seed_35_35_5",
+          "name": "return_delivered_order_items",
+          "arguments": {
+            "order_id": "#W8528674",
+            "item_ids": [
+              "6704763132"
+            ],
+            "payment_method_id": "paypal_7664977"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_35_35_5",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 7,
+        "timestamp": "2025-11-25T23:26:49.378335",
+        "tool_call": {
+          "id": "seed_35_35_6",
+          "name": "modify_pending_order_items",
+          "arguments": {
+            "order_id": "#W9672333",
+            "item_ids": [
+              "1684786391"
+            ],
+            "new_item_ids": [
+              "5052031638"
+            ],
+            "payment_method_id": "paypal_7664977"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_35_35_6",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2025-11-25T23:26:49.378336",
+    "end_time": "2025-11-25T23:26:49.378337",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You want to return the speaker that is more expensive yet not resistent to water. Also, You want to modify the 17-inch laptop to the 13-inch version in another order. If no exact item is available, you want to know all available 13-inch options, and you prefer i5 over i7, and prefer silver and black than other colors.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You are aarav_santos_2259 and aarav.santos8321@example.com and aarav.santos8320@example.com."
+    },
+    "statistics": {
+      "total_steps": 7,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "find_user_id_by_email": 2,
+        "get_user_details": 1,
+        "get_order_details": 1,
+        "get_product_details": 1,
+        "return_delivered_order_items": 1,
+        "modify_pending_order_items": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "35",
+    "task_description": {
+      "reason_for_call": "You want to return the speaker that is more expensive yet not resistent to water. Also, You want to modify the 17-inch laptop to the 13-inch version in another order. If no exact item is available, you want to know all available 13-inch options, and you prefer i5 over i7, and prefer silver and black than other colors.",
+      "known_info": "You are aarav_santos_2259 and aarav.santos8321@example.com and aarav.santos8320@example.com.",
+      "unknown_info": null
+    }
+  },
+  {
+    "trajectory_id": "traj_0005",
+    "domain_name": "retail",
+    "exploration_strategy": "seed_data",
+    "max_steps": 12,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2025-11-25T23:26:49.378344",
+        "tool_call": {
+          "id": "seed_31_31_0",
+          "name": "find_user_id_by_name_zip",
+          "arguments": {
+            "first_name": "Olivia",
+            "last_name": "Lopez",
+            "zip": "76171"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_31_31_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2025-11-25T23:26:49.378345",
+        "tool_call": {
+          "id": "seed_31_31_1",
+          "name": "get_user_details",
+          "arguments": {
+            "user_id": "olivia_lopez_3865"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_31_31_1",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 3,
+        "timestamp": "2025-11-25T23:26:49.378348",
+        "tool_call": {
+          "id": "seed_31_31_2",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W9319364"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_31_31_2",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 4,
+        "timestamp": "2025-11-25T23:26:49.378350",
+        "tool_call": {
+          "id": "seed_31_31_3",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W9373487"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_31_31_3",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 5,
+        "timestamp": "2025-11-25T23:26:49.378351",
+        "tool_call": {
+          "id": "seed_31_31_4",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W2692684"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_31_31_4",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 6,
+        "timestamp": "2025-11-25T23:26:49.378352",
+        "tool_call": {
+          "id": "seed_31_31_5",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W5481803"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_31_31_5",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 7,
+        "timestamp": "2025-11-25T23:26:49.378353",
+        "tool_call": {
+          "id": "seed_31_31_6",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W7449508"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_31_31_6",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 8,
+        "timestamp": "2025-11-25T23:26:49.378355",
+        "tool_call": {
+          "id": "seed_31_31_7",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W9373487"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_31_31_7",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 9,
+        "timestamp": "2025-11-25T23:26:49.378356",
+        "tool_call": {
+          "id": "seed_31_31_8",
+          "name": "cancel_pending_order",
+          "arguments": {
+            "order_id": "#W9373487",
+            "reason": "no longer needed"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_31_31_8",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 10,
+        "timestamp": "2025-11-25T23:26:49.378359",
+        "tool_call": {
+          "id": "seed_31_31_9",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W5481803"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_31_31_9",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 11,
+        "timestamp": "2025-11-25T23:26:49.378360",
+        "tool_call": {
+          "id": "seed_31_31_10",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W7449508"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_31_31_10",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 12,
+        "timestamp": "2025-11-25T23:26:49.378361",
+        "tool_call": {
+          "id": "seed_31_31_11",
+          "name": "return_delivered_order_items",
+          "arguments": {
+            "order_id": "#W7449508",
+            "item_ids": [
+              "6477915553"
+            ],
+            "payment_method_id": "gift_card_7711863"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_31_31_11",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2025-11-25T23:26:49.378363",
+    "end_time": "2025-11-25T23:26:49.378363",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": ". You just lost your tablet you just received and are in a bad mood. You want to know the tracking number of the order, and if the agent can help you refund or reorder the tablet. (You know it's a long shot, but you want to try). If not, cancel the charger you just bought, because it goes with the tablet... Also cancel the boot and keep the kettle (if not possible, do not do anything on that order), and return the sneaker.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You are Olivia Lopez, and you live in Texas in zipcode 76171."
+    },
+    "statistics": {
+      "total_steps": 12,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "find_user_id_by_name_zip": 1,
+        "get_user_details": 1,
+        "get_order_details": 8,
+        "cancel_pending_order": 1,
+        "return_delivered_order_items": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "31",
+    "task_description": {
+      "reason_for_call": ". You just lost your tablet you just received and are in a bad mood. You want to know the tracking number of the order, and if the agent can help you refund or reorder the tablet. (You know it's a long shot, but you want to try). If not, cancel the charger you just bought, because it goes with the tablet... Also cancel the boot and keep the kettle (if not possible, do not do anything on that order), and return the sneaker.",
+      "known_info": "You are Olivia Lopez, and you live in Texas in zipcode 76171.",
+      "unknown_info": "You don't have an email."
+    }
+  },
+  {
+    "trajectory_id": "traj_0006",
+    "domain_name": "retail",
+    "exploration_strategy": "seed_data",
+    "max_steps": 11,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2025-11-25T23:26:49.378368",
+        "tool_call": {
+          "id": "seed_28_28_0",
+          "name": "find_user_id_by_name_zip",
+          "arguments": {
+            "first_name": "Isabella",
+            "last_name": "Johansson",
+            "zip": "32286"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_28_28_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2025-11-25T23:26:49.378370",
+        "tool_call": {
+          "id": "seed_28_28_1",
+          "name": "get_user_details",
+          "arguments": {
+            "user_id": "isabella_johansson_2152"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_28_28_1",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 3,
+        "timestamp": "2025-11-25T23:26:49.378371",
+        "tool_call": {
+          "id": "seed_28_28_2",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W3792453"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_28_28_2",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 4,
+        "timestamp": "2025-11-25T23:26:49.378372",
+        "tool_call": {
+          "id": "seed_28_28_3",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W7181492"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_28_28_3",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 5,
+        "timestamp": "2025-11-25T23:26:49.378374",
+        "tool_call": {
+          "id": "seed_28_28_4",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W5565470"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_28_28_4",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 6,
+        "timestamp": "2025-11-25T23:26:49.378376",
+        "tool_call": {
+          "id": "seed_28_28_5",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W2575533"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_28_28_5",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 7,
+        "timestamp": "2025-11-25T23:26:49.378378",
+        "tool_call": {
+          "id": "seed_28_28_6",
+          "name": "return_delivered_order_items",
+          "arguments": {
+            "order_id": "#W3792453",
+            "item_ids": [
+              "4293355847"
+            ],
+            "payment_method_id": "paypal_3024827"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_28_28_6",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 8,
+        "timestamp": "2025-11-25T23:26:49.378379",
+        "tool_call": {
+          "id": "seed_28_28_7",
+          "name": "return_delivered_order_items",
+          "arguments": {
+            "order_id": "#W7181492",
+            "item_ids": [
+              "5753502325",
+              "9851293632"
+            ],
+            "payment_method_id": "paypal_3024827"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_28_28_7",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 9,
+        "timestamp": "2025-11-25T23:26:49.378382",
+        "tool_call": {
+          "id": "seed_28_28_8",
+          "name": "return_delivered_order_items",
+          "arguments": {
+            "order_id": "#W5565470",
+            "item_ids": [
+              "9570044148",
+              "6857426243"
+            ],
+            "payment_method_id": "paypal_3024827"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_28_28_8",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 10,
+        "timestamp": "2025-11-25T23:26:49.378383",
+        "tool_call": {
+          "id": "seed_28_28_9",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W2575533"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_28_28_9",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 11,
+        "timestamp": "2025-11-25T23:26:49.378388",
+        "tool_call": {
+          "id": "seed_28_28_10",
+          "name": "calculate",
+          "arguments": {
+            "expression": "200.8 + 96.35 + 193.38 + 231.37 + 196.53"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_28_28_10",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2025-11-25T23:26:49.378389",
+    "end_time": "2025-11-25T23:26:49.378390",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You want to return the skateboard, garden hose, backpack, keyboard, bed from a recent order and also cancel the hose from a pending order you just placed. If cancelling one item in an order is not possible, forget about it since you just want to cancel the hose and nothing else. You want to know how much you can get in total as refund after everything is done.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You are Isabella Johansson, and you live in zipcode 32286."
+    },
+    "statistics": {
+      "total_steps": 11,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "find_user_id_by_name_zip": 1,
+        "get_user_details": 1,
+        "get_order_details": 5,
+        "return_delivered_order_items": 3,
+        "calculate": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "28",
+    "task_description": {
+      "reason_for_call": "You want to return the skateboard, garden hose, backpack, keyboard, bed from a recent order and also cancel the hose from a pending order you just placed. If cancelling one item in an order is not possible, forget about it since you just want to cancel the hose and nothing else. You want to know how much you can get in total as refund after everything is done.",
+      "known_info": "You are Isabella Johansson, and you live in zipcode 32286.",
+      "unknown_info": "You don't know your email."
+    }
+  },
+  {
+    "trajectory_id": "traj_0007",
+    "domain_name": "retail",
+    "exploration_strategy": "seed_data",
+    "max_steps": 6,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2025-11-25T23:26:49.378393",
+        "tool_call": {
+          "id": "seed_17_17_0",
+          "name": "find_user_id_by_name_zip",
+          "arguments": {
+            "first_name": "Fatima",
+            "last_name": "Johnson",
+            "zip": "78712"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_17_17_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2025-11-25T23:26:49.378395",
+        "tool_call": {
+          "id": "seed_17_17_1",
+          "name": "get_user_details",
+          "arguments": {
+            "user_id": "fatima_johnson_7581"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_17_17_1",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 3,
+        "timestamp": "2025-11-25T23:26:49.378396",
+        "tool_call": {
+          "id": "seed_17_17_2",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W5199551"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_17_17_2",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 4,
+        "timestamp": "2025-11-25T23:26:49.378398",
+        "tool_call": {
+          "id": "seed_17_17_3",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W8665881"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_17_17_3",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 5,
+        "timestamp": "2025-11-25T23:26:49.378399",
+        "tool_call": {
+          "id": "seed_17_17_4",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W9389413"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_17_17_4",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 6,
+        "timestamp": "2025-11-25T23:26:49.378400",
+        "tool_call": {
+          "id": "seed_17_17_5",
+          "name": "modify_pending_order_address",
+          "arguments": {
+            "order_id": "#W8665881",
+            "address1": "123 Elm Street",
+            "address2": "Suite 641",
+            "city": "Austin",
+            "state": "TX",
+            "country": "USA",
+            "zip": "78712"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_17_17_5",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2025-11-25T23:26:49.378402",
+    "end_time": "2025-11-25T23:26:49.378402",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You want to change #W8665881 to be delivered to Suite 641 instead.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You are Fatima Johnson in zipcode 78712."
+    },
+    "statistics": {
+      "total_steps": 6,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "find_user_id_by_name_zip": 1,
+        "get_user_details": 1,
+        "get_order_details": 3,
+        "modify_pending_order_address": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "17",
+    "task_description": {
+      "reason_for_call": "You want to change #W8665881 to be delivered to Suite 641 instead.",
+      "known_info": "You are Fatima Johnson in zipcode 78712.",
+      "unknown_info": "You do not remember your email address"
+    }
+  },
+  {
+    "trajectory_id": "traj_0008",
+    "domain_name": "retail",
+    "exploration_strategy": "seed_data",
+    "max_steps": 6,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2025-11-25T23:26:49.378405",
+        "tool_call": {
+          "id": "seed_13_13_0",
+          "name": "find_user_id_by_email",
+          "arguments": {
+            "email": "mia.garcia2723@example.com"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_13_13_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2025-11-25T23:26:49.378407",
+        "tool_call": {
+          "id": "seed_13_13_1",
+          "name": "get_user_details",
+          "arguments": {
+            "user_id": "mia_garcia_4516"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_13_13_1",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 3,
+        "timestamp": "2025-11-25T23:26:49.378410",
+        "tool_call": {
+          "id": "seed_13_13_2",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W5490111"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_13_13_2",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 4,
+        "timestamp": "2025-11-25T23:26:49.378411",
+        "tool_call": {
+          "id": "seed_13_13_3",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W7387996"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_13_13_3",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 5,
+        "timestamp": "2025-11-25T23:26:49.378412",
+        "tool_call": {
+          "id": "seed_13_13_4",
+          "name": "return_delivered_order_items",
+          "arguments": {
+            "order_id": "#W5490111",
+            "item_ids": [
+              "4579334072",
+              "6117189161",
+              "4947717507"
+            ],
+            "payment_method_id": "paypal_9497703"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_13_13_4",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 6,
+        "timestamp": "2025-11-25T23:26:49.378415",
+        "tool_call": {
+          "id": "seed_13_13_5",
+          "name": "return_delivered_order_items",
+          "arguments": {
+            "order_id": "#W5490111",
+            "item_ids": [
+              "4579334072",
+              "6117189161",
+              "4947717507"
+            ],
+            "payment_method_id": "credit_card_3124723"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_13_13_5",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2025-11-25T23:26:49.378417",
+    "end_time": "2025-11-25T23:26:49.378417",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You just got into gaming and want to cancel or return everything not associated with it. (Everything except a keyboard and a mouse, but do not reveal it to the agent). PayPal is prefered for refund, but otherwise credit card can be accepted.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You are mia_garcia_4516 with email mia.garcia2723@example.com"
+    },
+    "statistics": {
+      "total_steps": 6,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "find_user_id_by_email": 1,
+        "get_user_details": 1,
+        "get_order_details": 2,
+        "return_delivered_order_items": 2
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "13",
+    "task_description": {
+      "reason_for_call": "You just got into gaming and want to cancel or return everything not associated with it. (Everything except a keyboard and a mouse, but do not reveal it to the agent). PayPal is prefered for refund, but otherwise credit card can be accepted.",
+      "known_info": "You are mia_garcia_4516 with email mia.garcia2723@example.com",
+      "unknown_info": null
+    }
+  },
+  {
+    "trajectory_id": "traj_0009",
+    "domain_name": "retail",
+    "exploration_strategy": "seed_data",
+    "max_steps": 2,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2025-11-25T23:26:49.378420",
+        "tool_call": {
+          "id": "seed_86_86_0",
+          "name": "modify_pending_order_items",
+          "arguments": {
+            "order_id": "#W2466703",
+            "item_ids": [
+              "9385662952"
+            ],
+            "new_item_ids": [
+              "8733974883"
+            ],
+            "payment_method_id": "paypal_7529813"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_86_86_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2025-11-25T23:26:49.378422",
+        "tool_call": {
+          "id": "seed_86_86_1",
+          "name": "modify_user_address",
+          "arguments": {
+            "user_id": "yusuf_hernandez_6785",
+            "address1": "565 Maple Drive",
+            "address2": "Suite 501",
+            "city": "Washington",
+            "country": "USA",
+            "state": "DC",
+            "zip": "20307"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_86_86_1",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2025-11-25T23:26:49.378423",
+    "end_time": "2025-11-25T23:26:49.378424",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You want to exchange your Fleece Jacket to red color and half zipper. You also want to want to change your default address to your Washington DC address (which you do not want to reveal but is in one of the orders).",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You name is Yusuf Hernandez and your email is yusuf.hernandez8836@example.com."
+    },
+    "statistics": {
+      "total_steps": 2,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "modify_pending_order_items": 1,
+        "modify_user_address": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "86",
+    "task_description": {
+      "reason_for_call": "You want to exchange your Fleece Jacket to red color and half zipper. You also want to want to change your default address to your Washington DC address (which you do not want to reveal but is in one of the orders).",
+      "known_info": "You name is Yusuf Hernandez and your email is yusuf.hernandez8836@example.com.",
+      "unknown_info": null
+    }
+  },
+  {
+    "trajectory_id": "traj_0010",
+    "domain_name": "retail",
+    "exploration_strategy": "seed_data",
+    "max_steps": 4,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2025-11-25T23:26:49.378426",
+        "tool_call": {
+          "id": "seed_69_69_0",
+          "name": "find_user_id_by_name_zip",
+          "arguments": {
+            "first_name": "Emma",
+            "last_name": "Smith",
+            "zip": "10192"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_69_69_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2025-11-25T23:26:49.378427",
+        "tool_call": {
+          "id": "seed_69_69_1",
+          "name": "get_user_details",
+          "arguments": {
+            "user_id": "emma_smith_8564"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_69_69_1",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 3,
+        "timestamp": "2025-11-25T23:26:49.378431",
+        "tool_call": {
+          "id": "seed_69_69_2",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W2417020"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_69_69_2",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 4,
+        "timestamp": "2025-11-25T23:26:49.378433",
+        "tool_call": {
+          "id": "seed_69_69_3",
+          "name": "cancel_pending_order",
+          "arguments": {
+            "order_id": "#W2417020",
+            "reason": "no longer needed"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_69_69_3",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2025-11-25T23:26:49.378434",
+    "end_time": "2025-11-25T23:26:49.378435",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You want to return an item you just received: a laptop. You think that you ordered it around April 2023 but are not sure. You want to return it because you found a better deal elsewhere. You want to return it for a full refund. If it cannot be returned, see if it can be canceled.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You are emma_smith_8564 living in New York, New York, 10192."
+    },
+    "statistics": {
+      "total_steps": 4,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "find_user_id_by_name_zip": 1,
+        "get_user_details": 1,
+        "get_order_details": 1,
+        "cancel_pending_order": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "69",
+    "task_description": {
+      "reason_for_call": "You want to return an item you just received: a laptop. You think that you ordered it around April 2023 but are not sure. You want to return it because you found a better deal elsewhere. You want to return it for a full refund. If it cannot be returned, see if it can be canceled.",
+      "known_info": "You are emma_smith_8564 living in New York, New York, 10192.",
+      "unknown_info": "You do not remember your email address"
+    }
+  },
+  {
+    "trajectory_id": "traj_0011",
+    "domain_name": "retail",
+    "exploration_strategy": "seed_data",
+    "max_steps": 6,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2025-11-25T23:26:49.378437",
+        "tool_call": {
+          "id": "seed_11_11_0",
+          "name": "find_user_id_by_email",
+          "arguments": {
+            "email": "mia.garcia2723@example.com"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_11_11_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2025-11-25T23:26:49.378439",
+        "tool_call": {
+          "id": "seed_11_11_1",
+          "name": "get_user_details",
+          "arguments": {
+            "user_id": "mia_garcia_4516"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_11_11_1",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 3,
+        "timestamp": "2025-11-25T23:26:49.378440",
+        "tool_call": {
+          "id": "seed_11_11_2",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W5490111"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_11_11_2",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 4,
+        "timestamp": "2025-11-25T23:26:49.378443",
+        "tool_call": {
+          "id": "seed_11_11_3",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W7387996"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_11_11_3",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 5,
+        "timestamp": "2025-11-25T23:26:49.378444",
+        "tool_call": {
+          "id": "seed_11_11_4",
+          "name": "return_delivered_order_items",
+          "arguments": {
+            "order_id": "#W5490111",
+            "item_ids": [
+              "4579334072",
+              "1421289881",
+              "6117189161",
+              "4947717507"
+            ],
+            "payment_method_id": "credit_card_3124723"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_11_11_4",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 6,
+        "timestamp": "2025-11-25T23:26:49.378445",
+        "tool_call": {
+          "id": "seed_11_11_5",
+          "name": "return_delivered_order_items",
+          "arguments": {
+            "order_id": "#W7387996",
+            "item_ids": [
+              "5796612084"
+            ],
+            "payment_method_id": "paypal_9497703"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_11_11_5",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2025-11-25T23:26:49.378447",
+    "end_time": "2025-11-25T23:26:49.378448",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "For some reason, you want to return all things ordered. You have two payment methods and two orders, and you want to refund each order to the other order's payment method. If not possible, you are angry and swear for a few times, then agree to return all things with the original payment method.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You are mia_garcia_4516 (mia.garcia2723@example.com)."
+    },
+    "statistics": {
+      "total_steps": 6,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "find_user_id_by_email": 1,
+        "get_user_details": 1,
+        "get_order_details": 2,
+        "return_delivered_order_items": 2
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "11",
+    "task_description": {
+      "reason_for_call": "For some reason, you want to return all things ordered. You have two payment methods and two orders, and you want to refund each order to the other order's payment method. If not possible, you are angry and swear for a few times, then agree to return all things with the original payment method.",
+      "known_info": "You are mia_garcia_4516 (mia.garcia2723@example.com).",
+      "unknown_info": null
+    }
+  },
+  {
+    "trajectory_id": "traj_0012",
+    "domain_name": "retail",
+    "exploration_strategy": "seed_data",
+    "max_steps": 1,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2025-11-25T23:26:49.378450",
+        "tool_call": {
+          "id": "seed_75_75_0",
+          "name": "exchange_delivered_order_items",
+          "arguments": {
+            "order_id": "#W6908222",
+            "item_ids": [
+              "8555936349"
+            ],
+            "new_item_ids": [
+              "4063058357"
+            ],
+            "payment_method_id": "paypal_4518393"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_75_75_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2025-11-25T23:26:49.378453",
+    "end_time": "2025-11-25T23:26:49.378454",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "For #W6908222, you want to exchange Wireless Earbuds {'color': 'blue', 'battery life': '8 hours', 'water resistance': 'IPX4'} to one with the following attributes: {'color': 'black', 'battery life': '4 hours', 'water resistance': 'not resistant'}",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You name is Liam Moore and your email is liam.moore6985@example.com."
+    },
+    "statistics": {
+      "total_steps": 1,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "exchange_delivered_order_items": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "75",
+    "task_description": {
+      "reason_for_call": "For #W6908222, you want to exchange Wireless Earbuds {'color': 'blue', 'battery life': '8 hours', 'water resistance': 'IPX4'} to one with the following attributes: {'color': 'black', 'battery life': '4 hours', 'water resistance': 'not resistant'}",
+      "known_info": "You name is Liam Moore and your email is liam.moore6985@example.com.",
+      "unknown_info": null
+    }
+  },
+  {
+    "trajectory_id": "traj_0013",
+    "domain_name": "retail",
+    "exploration_strategy": "seed_data",
+    "max_steps": 12,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2025-11-25T23:26:49.378456",
+        "tool_call": {
+          "id": "seed_54_54_0",
+          "name": "find_user_id_by_email",
+          "arguments": {
+            "email": "silva7872@example.com"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_54_54_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2025-11-25T23:26:49.378457",
+        "tool_call": {
+          "id": "seed_54_54_1",
+          "name": "find_user_id_by_email",
+          "arguments": {
+            "email": "amelia.silva7872@example.com"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_54_54_1",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 3,
+        "timestamp": "2025-11-25T23:26:49.378459",
+        "tool_call": {
+          "id": "seed_54_54_2",
+          "name": "get_user_details",
+          "arguments": {
+            "user_id": "amelia_silva_7726"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_54_54_2",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 4,
+        "timestamp": "2025-11-25T23:26:49.378460",
+        "tool_call": {
+          "id": "seed_54_54_3",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W2586676"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_54_54_3",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 5,
+        "timestamp": "2025-11-25T23:26:49.378461",
+        "tool_call": {
+          "id": "seed_54_54_4",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W5400801"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_54_54_4",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 6,
+        "timestamp": "2025-11-25T23:26:49.378462",
+        "tool_call": {
+          "id": "seed_54_54_5",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W4597054"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_54_54_5",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 7,
+        "timestamp": "2025-11-25T23:26:49.378465",
+        "tool_call": {
+          "id": "seed_54_54_6",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W4836353"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_54_54_6",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 8,
+        "timestamp": "2025-11-25T23:26:49.378466",
+        "tool_call": {
+          "id": "seed_54_54_7",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W7773202"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_54_54_7",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 9,
+        "timestamp": "2025-11-25T23:26:49.378469",
+        "tool_call": {
+          "id": "seed_54_54_8",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W7342738"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_54_54_8",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 10,
+        "timestamp": "2025-11-25T23:26:49.378472",
+        "tool_call": {
+          "id": "seed_54_54_9",
+          "name": "cancel_pending_order",
+          "arguments": {
+            "order_id": "#W4836353",
+            "reason": "no longer needed"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_54_54_9",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 11,
+        "timestamp": "2025-11-25T23:26:49.378474",
+        "tool_call": {
+          "id": "seed_54_54_10",
+          "name": "cancel_pending_order",
+          "arguments": {
+            "order_id": "#W7342738",
+            "reason": "no longer needed"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_54_54_10",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 12,
+        "timestamp": "2025-11-25T23:26:49.378476",
+        "tool_call": {
+          "id": "seed_54_54_11",
+          "name": "return_delivered_order_items",
+          "arguments": {
+            "order_id": "#W4597054",
+            "item_ids": [
+              "5669664287",
+              "4900990404",
+              "9862136885",
+              "6777246137"
+            ],
+            "payment_method_id": "gift_card_3491931"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_54_54_11",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2025-11-25T23:26:49.378478",
+    "end_time": "2025-11-25T23:26:49.378478",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You recently faced a financial issue and want to cancel or return all possible orders.  Well, except the boots that you really really love, but you are happy to exchange it for boots of the exact same size and material to get maximum money back, but only if they are cheaper than what you have paid. At the end of the day, you ask the agent how much money you will get back.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You are Amelia, and you have two emails: silva7872@example.com and amelia.silva7872@example.com. You live in Philadelphia, and you are a loyal customer."
+    },
+    "statistics": {
+      "total_steps": 12,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "find_user_id_by_email": 2,
+        "get_user_details": 1,
+        "get_order_details": 6,
+        "cancel_pending_order": 2,
+        "return_delivered_order_items": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "54",
+    "task_description": {
+      "reason_for_call": "You recently faced a financial issue and want to cancel or return all possible orders.  Well, except the boots that you really really love, but you are happy to exchange it for boots of the exact same size and material to get maximum money back, but only if they are cheaper than what you have paid. At the end of the day, you ask the agent how much money you will get back.",
+      "known_info": "You are Amelia, and you have two emails: silva7872@example.com and amelia.silva7872@example.com. You live in Philadelphia, and you are a loyal customer.",
+      "unknown_info": null
+    }
+  },
+  {
+    "trajectory_id": "traj_0014",
+    "domain_name": "retail",
+    "exploration_strategy": "seed_data",
+    "max_steps": 13,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2025-11-25T23:26:49.378481",
+        "tool_call": {
+          "id": "seed_4_4_0",
+          "name": "find_user_id_by_name_zip",
+          "arguments": {
+            "first_name": "Yusuf",
+            "last_name": "Rossi",
+            "zip": "19122"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_4_4_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2025-11-25T23:26:49.378483",
+        "tool_call": {
+          "id": "seed_4_4_1",
+          "name": "get_product_details",
+          "arguments": {
+            "product_id": "6086499569"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_4_4_1",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 3,
+        "timestamp": "2025-11-25T23:26:49.378484",
+        "tool_call": {
+          "id": "seed_4_4_3",
+          "name": "get_product_details",
+          "arguments": {
+            "product_id": "9523456873"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_4_4_3",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 4,
+        "timestamp": "2025-11-25T23:26:49.378486",
+        "tool_call": {
+          "id": "seed_4_4_4",
+          "name": "get_user_details",
+          "arguments": {
+            "user_id": "yusuf_rossi_9620"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_4_4_4",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 5,
+        "timestamp": "2025-11-25T23:26:49.378487",
+        "tool_call": {
+          "id": "seed_4_4_5",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W6247578"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_4_4_5",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 6,
+        "timestamp": "2025-11-25T23:26:49.378488",
+        "tool_call": {
+          "id": "seed_4_4_6",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W9711842"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_4_4_6",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 7,
+        "timestamp": "2025-11-25T23:26:49.378489",
+        "tool_call": {
+          "id": "seed_4_4_7",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W4776164"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_4_4_7",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 8,
+        "timestamp": "2025-11-25T23:26:49.378492",
+        "tool_call": {
+          "id": "seed_4_4_8",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W6679257"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_4_4_8",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 9,
+        "timestamp": "2025-11-25T23:26:49.378493",
+        "tool_call": {
+          "id": "seed_4_4_9",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W2378156"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_4_4_9",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 10,
+        "timestamp": "2025-11-25T23:26:49.378497",
+        "tool_call": {
+          "id": "seed_4_4_10",
+          "name": "get_product_details",
+          "arguments": {
+            "product_id": "9523456873"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_4_4_10",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 11,
+        "timestamp": "2025-11-25T23:26:49.378499",
+        "tool_call": {
+          "id": "seed_4_4_11",
+          "name": "get_user_details",
+          "arguments": {
+            "user_id": "yusuf_rossi_9620"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_4_4_11",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 12,
+        "timestamp": "2025-11-25T23:26:49.378500",
+        "tool_call": {
+          "id": "seed_4_4_12",
+          "name": "modify_pending_order_items",
+          "arguments": {
+            "order_id": "#W6247578",
+            "item_ids": [
+              "3799046073"
+            ],
+            "new_item_ids": [
+              "9647292434"
+            ],
+            "payment_method_id": "credit_card_9513926"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_4_4_12",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 13,
+        "timestamp": "2025-11-25T23:26:49.378501",
+        "tool_call": {
+          "id": "seed_4_4_13",
+          "name": "modify_pending_order_items",
+          "arguments": {
+            "order_id": "#W4776164",
+            "item_ids": [
+              "8349118980"
+            ],
+            "new_item_ids": [
+              "9647292434"
+            ],
+            "payment_method_id": "credit_card_9513926"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_4_4_13",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2025-11-25T23:26:49.378503",
+    "end_time": "2025-11-25T23:26:49.378503",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You want to know how many tshirt options are available in the online store right now. You want to modify all your pending tshirts to purple, s size, same v-neck, and prefer polyester.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You are Yusuf Rossi in zipcode 19122."
+    },
+    "statistics": {
+      "total_steps": 13,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "find_user_id_by_name_zip": 1,
+        "get_product_details": 3,
+        "get_user_details": 2,
+        "get_order_details": 5,
+        "modify_pending_order_items": 2
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "4",
+    "task_description": {
+      "reason_for_call": "You want to know how many tshirt options are available in the online store right now. You want to modify all your pending tshirts to purple, s size, same v-neck, and prefer polyester.",
+      "known_info": "You are Yusuf Rossi in zipcode 19122.",
+      "unknown_info": "You do not remember your email address."
+    }
+  },
+  {
+    "trajectory_id": "traj_0015",
+    "domain_name": "retail",
+    "exploration_strategy": "seed_data",
+    "max_steps": 6,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2025-11-25T23:26:49.378509",
+        "tool_call": {
+          "id": "seed_27_27_0",
+          "name": "find_user_id_by_name_zip",
+          "arguments": {
+            "first_name": "Isabella",
+            "last_name": "Johansson",
+            "zip": "32286"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_27_27_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2025-11-25T23:26:49.378510",
+        "tool_call": {
+          "id": "seed_27_27_1",
+          "name": "get_user_details",
+          "arguments": {
+            "user_id": "isabella_johansson_2152"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_27_27_1",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 3,
+        "timestamp": "2025-11-25T23:26:49.378511",
+        "tool_call": {
+          "id": "seed_27_27_2",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W3792453"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_27_27_2",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 4,
+        "timestamp": "2025-11-25T23:26:49.378513",
+        "tool_call": {
+          "id": "seed_27_27_3",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W7181492"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_27_27_3",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 5,
+        "timestamp": "2025-11-25T23:26:49.378516",
+        "tool_call": {
+          "id": "seed_27_27_4",
+          "name": "get_product_details",
+          "arguments": {
+            "product_id": "7363354090"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_27_27_4",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 6,
+        "timestamp": "2025-11-25T23:26:49.378518",
+        "tool_call": {
+          "id": "seed_27_27_5",
+          "name": "exchange_delivered_order_items",
+          "arguments": {
+            "order_id": "#W7181492",
+            "item_ids": [
+              "8118291112"
+            ],
+            "new_item_ids": [
+              "8277474082"
+            ],
+            "payment_method_id": "paypal_3024827"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_27_27_5",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2025-11-25T23:26:49.378520",
+    "end_time": "2025-11-25T23:26:49.378521",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "From a recent order, you want to return the hose, backpack, and exchange the hiking boots to the exact same item but a waterproof variant. Make sure you mention the two requests at the same time, and if the agent says they can only do one, you prefer to do the exchange.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You are Isabella Johansson, and you live in zipcode 32286."
+    },
+    "statistics": {
+      "total_steps": 6,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "find_user_id_by_name_zip": 1,
+        "get_user_details": 1,
+        "get_order_details": 2,
+        "get_product_details": 1,
+        "exchange_delivered_order_items": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "27",
+    "task_description": {
+      "reason_for_call": "From a recent order, you want to return the hose, backpack, and exchange the hiking boots to the exact same item but a waterproof variant. Make sure you mention the two requests at the same time, and if the agent says they can only do one, you prefer to do the exchange.",
+      "known_info": "You are Isabella Johansson, and you live in zipcode 32286.",
+      "unknown_info": "You do not remember your email address"
+    }
+  },
+  {
+    "trajectory_id": "traj_0016",
+    "domain_name": "retail",
+    "exploration_strategy": "seed_data",
+    "max_steps": 6,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2025-11-25T23:26:49.378523",
+        "tool_call": {
+          "id": "seed_29_29_0",
+          "name": "find_user_id_by_name_zip",
+          "arguments": {
+            "first_name": "Isabella",
+            "last_name": "Johansson",
+            "zip": "32286"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_29_29_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2025-11-25T23:26:49.378526",
+        "tool_call": {
+          "id": "seed_29_29_1",
+          "name": "get_user_details",
+          "arguments": {
+            "user_id": "isabella_johansson_2152"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_29_29_1",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 3,
+        "timestamp": "2025-11-25T23:26:49.378527",
+        "tool_call": {
+          "id": "seed_29_29_2",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W3792453"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_29_29_2",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 4,
+        "timestamp": "2025-11-25T23:26:49.378529",
+        "tool_call": {
+          "id": "seed_29_29_3",
+          "name": "get_product_details",
+          "arguments": {
+            "product_id": "1968349452"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_29_29_3",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 5,
+        "timestamp": "2025-11-25T23:26:49.378530",
+        "tool_call": {
+          "id": "seed_29_29_4",
+          "name": "exchange_delivered_order_items",
+          "arguments": {
+            "order_id": "#W3792453",
+            "item_ids": [
+              "4293355847"
+            ],
+            "new_item_ids": [
+              "8176740019"
+            ],
+            "payment_method_id": "paypal_3024827"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_29_29_4",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 6,
+        "timestamp": "2025-11-25T23:26:49.378531",
+        "tool_call": {
+          "id": "seed_29_29_5",
+          "name": "exchange_delivered_order_items",
+          "arguments": {
+            "order_id": "#W7181492",
+            "item_ids": [
+              "5753502325"
+            ],
+            "new_item_ids": [
+              "5206946487"
+            ],
+            "payment_method_id": "paypal_3024827"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_29_29_5",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2025-11-25T23:26:49.378533",
+    "end_time": "2025-11-25T23:26:49.378533",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You want to exchange your skateboard for a shorter bamboo material one. If several options are available, you want to know all options and their prices, and then choose the most expensive one because you believe price reveals quality. Also, you want to exchange the garden hose you received for the type that you just ordered (in a pending order).",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You are Isabella Johansson, and you live in zipcode 32286."
+    },
+    "statistics": {
+      "total_steps": 6,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "find_user_id_by_name_zip": 1,
+        "get_user_details": 1,
+        "get_order_details": 1,
+        "get_product_details": 1,
+        "exchange_delivered_order_items": 2
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "29",
+    "task_description": {
+      "reason_for_call": "You want to exchange your skateboard for a shorter bamboo material one. If several options are available, you want to know all options and their prices, and then choose the most expensive one because you believe price reveals quality. Also, you want to exchange the garden hose you received for the type that you just ordered (in a pending order).",
+      "known_info": "You are Isabella Johansson, and you live in zipcode 32286.",
+      "unknown_info": "You do not remember your email address"
+    }
+  },
+  {
+    "trajectory_id": "traj_0017",
+    "domain_name": "retail",
+    "exploration_strategy": "seed_data",
+    "max_steps": 8,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2025-11-25T23:26:49.378538",
+        "tool_call": {
+          "id": "seed_64_64_0",
+          "name": "find_user_id_by_name_zip",
+          "arguments": {
+            "first_name": "James",
+            "last_name": "Sanchez",
+            "zip": "60623"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_64_64_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2025-11-25T23:26:49.378539",
+        "tool_call": {
+          "id": "seed_64_64_1",
+          "name": "get_user_details",
+          "arguments": {
+            "user_id": "james_sanchez_3954"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_64_64_1",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 3,
+        "timestamp": "2025-11-25T23:26:49.378540",
+        "tool_call": {
+          "id": "seed_64_64_2",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W7464385"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_64_64_2",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 4,
+        "timestamp": "2025-11-25T23:26:49.378541",
+        "tool_call": {
+          "id": "seed_64_64_3",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W8499625"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_64_64_3",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 5,
+        "timestamp": "2025-11-25T23:26:49.378543",
+        "tool_call": {
+          "id": "seed_64_64_4",
+          "name": "get_order_details",
+          "arguments": {
+            "order_id": "#W1279004"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_64_64_4",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 6,
+        "timestamp": "2025-11-25T23:26:49.378544",
+        "tool_call": {
+          "id": "seed_64_64_5",
+          "name": "get_product_details",
+          "arguments": {
+            "product_id": "3377618313"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_64_64_5",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 7,
+        "timestamp": "2025-11-25T23:26:49.378545",
+        "tool_call": {
+          "id": "seed_64_64_6",
+          "name": "exchange_delivered_order_items",
+          "arguments": {
+            "order_id": "#W7464385",
+            "item_ids": [
+              "1810466394"
+            ],
+            "new_item_ids": [
+              "6700049080"
+            ],
+            "payment_method_id": "paypal_1261484"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_64_64_6",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 8,
+        "timestamp": "2025-11-25T23:26:49.378547",
+        "tool_call": {
+          "id": "seed_64_64_7",
+          "name": "modify_pending_order_items",
+          "arguments": {
+            "order_id": "#W7464385",
+            "item_ids": [
+              "1810466394"
+            ],
+            "new_item_ids": [
+              "6700049080"
+            ],
+            "payment_method_id": "paypal_1261484"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_64_64_7",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2025-11-25T23:26:49.378548",
+    "end_time": "2025-11-25T23:26:49.378549",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You want to exchange the camera for the highest resolution, waterproof camera that you can get with the previous purchaced price.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You are James Sanchez. You live in Chicago 60623."
+    },
+    "statistics": {
+      "total_steps": 8,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "find_user_id_by_name_zip": 1,
+        "get_user_details": 1,
+        "get_order_details": 3,
+        "get_product_details": 1,
+        "exchange_delivered_order_items": 1,
+        "modify_pending_order_items": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "64",
+    "task_description": {
+      "reason_for_call": "You want to exchange the camera for the highest resolution, waterproof camera that you can get with the previous purchaced price.",
+      "known_info": "You are James Sanchez. You live in Chicago 60623.",
+      "unknown_info": "You do not remember your email address"
+    }
+  },
+  {
+    "trajectory_id": "traj_0018",
+    "domain_name": "retail",
+    "exploration_strategy": "seed_data",
+    "max_steps": 1,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2025-11-25T23:26:49.378553",
+        "tool_call": {
+          "id": "seed_77_77_0",
+          "name": "exchange_delivered_order_items",
+          "arguments": {
+            "order_id": "#W1671835",
+            "item_ids": [
+              "5081446110"
+            ],
+            "new_item_ids": [
+              "3399869890"
+            ],
+            "payment_method_id": "paypal_6918118"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_77_77_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2025-11-25T23:26:49.378581",
+    "end_time": "2025-11-25T23:26:49.378582",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You ordered a perfume and you just tried a little bit and you like it a lot. You want to get the maximum size available for it.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You name is Ivan Johnson and your zip code is 94183."
+    },
+    "statistics": {
+      "total_steps": 1,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "exchange_delivered_order_items": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "77",
+    "task_description": {
+      "reason_for_call": "You ordered a perfume and you just tried a little bit and you like it a lot. You want to get the maximum size available for it.",
+      "known_info": "You name is Ivan Johnson and your zip code is 94183.",
+      "unknown_info": "You do not remember your email address"
+    }
+  },
+  {
+    "trajectory_id": "traj_0019",
+    "domain_name": "retail",
+    "exploration_strategy": "seed_data",
+    "max_steps": 2,
+    "steps": [
+      {
+        "step_number": 1,
+        "timestamp": "2025-11-25T23:26:49.378587",
+        "tool_call": {
+          "id": "seed_71_71_0",
+          "name": "modify_pending_order_address",
+          "arguments": {
+            "order_id": "#W5270061",
+            "address1": "159 Hickory Lane",
+            "address2": "Suite 995",
+            "city": "Charlotte",
+            "country": "USA",
+            "state": "NC",
+            "zip": "28243"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_71_71_0",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      },
+      {
+        "step_number": 2,
+        "timestamp": "2025-11-25T23:26:49.378589",
+        "tool_call": {
+          "id": "seed_71_71_1",
+          "name": "modify_pending_order_items",
+          "arguments": {
+            "order_id": "#W5270061",
+            "item_ids": [
+              "2492465580"
+            ],
+            "new_item_ids": [
+              "5917587651"
+            ],
+            "payment_method_id": "paypal_7729105"
+          },
+          "requestor": "assistant"
+        },
+        "tool_response": {
+          "role": "tool",
+          "content": "Response not available in seed data",
+          "id": "seed_71_71_1",
+          "requestor": "assistant",
+          "error": false
+        },
+        "llm_reasoning": null,
+        "available_tools": [],
+        "execution_status": "success",
+        "error_message": null
+      }
+    ],
+    "start_time": "2025-11-25T23:26:49.378590",
+    "end_time": "2025-11-25T23:26:49.378591",
+    "termination_reason": "max_steps_reached",
+    "total_cost": 0.0,
+    "goal_description": "You made some mistake and ordered an order sent to your son's address in Washington DC, and you want to modify it to your default address in Charlotte (you do not want to mention it, but it is in your user profile the agent can look up) because he is coming back home. You also want to adjust the desk lamp to be black color, and the backpack to be medium size and polyester material instead. If multiple colors are available for the backpack, you prefer grey. If the agent asks for payment method, you say GC initially, but when the agent asks you to confirm before proceeding, you change your mind to PayPal, and decide to only modify the backpack.",
+    "user_info": {
+      "source": "task_extraction",
+      "known_info": "You name is Ivan Khan and your zip code is 28243."
+    },
+    "statistics": {
+      "total_steps": 2,
+      "success_rate": 1.0,
+      "tool_usage": {
+        "modify_pending_order_address": 1,
+        "modify_pending_order_items": 1
+      }
+    },
+    "data_source": "seed",
+    "is_seed_data": true,
+    "source_task_id": "71",
+    "task_description": {
+      "reason_for_call": "You made some mistake and ordered an order sent to your son's address in Washington DC, and you want to modify it to your default address in Charlotte (you do not want to mention it, but it is in your user profile the agent can look up) because he is coming back home. You also want to adjust the desk lamp to be black color, and the backpack to be medium size and polyester material instead. If multiple colors are available for the backpack, you prefer grey. If the agent asks for payment method, you say GC initially, but when the agent asks you to confirm before proceeding, you change your mind to PayPal, and decide to only modify the backpack.",
+      "known_info": "You name is Ivan Khan and your zip code is 28243.",
+      "unknown_info": "You do not remember your email address"
+    }
+  }
+]

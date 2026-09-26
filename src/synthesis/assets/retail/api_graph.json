@@ -1,0 +1,439 @@
+{
+  "domain": "retail_plain",
+  "description": "API dependency graph for retail_plain domain based on manual analysis of actual workflow dependencies",
+  "nodes": [
+    {
+      "api_name": "find_user_id_by_email",
+      "tool_type": "READ",
+      "inputs": {
+        "email": "str"
+      },
+      "output": "str (user_id)",
+      "description": "Find user id by email. Required for authentication.",
+      "workflow_role": "Authentication - primary method"
+    },
+    {
+      "api_name": "find_user_id_by_name_zip",
+      "tool_type": "READ",
+      "inputs": {
+        "first_name": "str",
+        "last_name": "str",
+        "zip": "str"
+      },
+      "output": "str (user_id)",
+      "description": "Find user id by first name, last name, and zip code. Fallback authentication method.",
+      "workflow_role": "Authentication - fallback method"
+    },
+    {
+      "api_name": "get_user_details",
+      "tool_type": "READ",
+      "inputs": {
+        "user_id": "str"
+      },
+      "output": "User",
+      "description": "Get the details of a user, including their orders list and payment methods.",
+      "workflow_role": "User information retrieval - provides order_ids and payment_method_ids"
+    },
+    {
+      "api_name": "get_order_details",
+      "tool_type": "READ",
+      "inputs": {
+        "order_id": "str"
+      },
+      "output": "Order",
+      "description": "Get the status and details of an order.",
+      "workflow_role": "Order information retrieval - provides order status, items, user_id, payment info"
+    },
+    {
+      "api_name": "get_product_details",
+      "tool_type": "READ",
+      "inputs": {
+        "product_id": "str"
+      },
+      "output": "Product",
+      "description": "Get the inventory details of a product including all variant items.",
+      "workflow_role": "Product information retrieval - provides available item_ids for exchange/modify"
+    },
+    {
+      "api_name": "list_all_product_types",
+      "tool_type": "READ",
+      "inputs": {},
+      "output": "str (JSON)",
+      "description": "List the name and product id of all product types.",
+      "workflow_role": "Product discovery - maps product names to product_ids"
+    },
+    {
+      "api_name": "cancel_pending_order",
+      "tool_type": "WRITE",
+      "inputs": {
+        "order_id": "str",
+        "reason": "str"
+      },
+      "output": "Order",
+      "description": "Cancel a pending order with specified reason.",
+      "workflow_role": "Order cancellation - requires order_id from get_order_details"
+    },
+    {
+      "api_name": "modify_pending_order_address",
+      "tool_type": "WRITE",
+      "inputs": {
+        "order_id": "str",
+        "address1": "str",
+        "address2": "str",
+        "city": "str",
+        "state": "str",
+        "country": "str",
+        "zip": "str"
+      },
+      "output": "Order",
+      "description": "Modify the shipping address of a pending order.",
+      "workflow_role": "Order modification - requires order_id from get_order_details"
+    },
+    {
+      "api_name": "modify_pending_order_items",
+      "tool_type": "WRITE",
+      "inputs": {
+        "order_id": "str",
+        "item_ids": "List[str]",
+        "new_item_ids": "List[str]",
+        "payment_method_id": "str"
+      },
+      "output": "Order",
+      "description": "Modify items in a pending order. Can only be called once per order.",
+      "workflow_role": "Order modification - requires order_id, item_ids from Order, payment_method_id from User"
+    },
+    {
+      "api_name": "modify_pending_order_payment",
+      "tool_type": "WRITE",
+      "inputs": {
+        "order_id": "str",
+        "payment_method_id": "str"
+      },
+      "output": "Order",
+      "description": "Modify the payment method of a pending order.",
+      "workflow_role": "Order modification - requires order_id and payment_method_id from User"
+    },
+    {
+      "api_name": "exchange_delivered_order_items",
+      "tool_type": "WRITE",
+      "inputs": {
+        "order_id": "str",
+        "item_ids": "List[str]",
+        "new_item_ids": "List[str]",
+        "payment_method_id": "str"
+      },
+      "output": "Order",
+      "description": "Exchange items in a delivered order. Can only be called once per order.",
+      "workflow_role": "Order exchange - requires order_id, item_ids from Order, new_item_ids from Product, payment_method_id from User"
+    },
+    {
+      "api_name": "return_delivered_order_items",
+      "tool_type": "WRITE",
+      "inputs": {
+        "order_id": "str",
+        "item_ids": "List[str]",
+        "payment_method_id": "str"
+      },
+      "output": "Order",
+      "description": "Return some items of a delivered order.",
+      "workflow_role": "Order return - requires order_id, item_ids from Order, payment_method_id from User"
+    },
+    {
+      "api_name": "modify_user_address",
+      "tool_type": "WRITE",
+      "inputs": {
+        "user_id": "str",
+        "address1": "str",
+        "address2": "str",
+        "city": "str",
+        "state": "str",
+        "country": "str",
+        "zip": "str"
+      },
+      "output": "User",
+      "description": "Modify the default address of a user.",
+      "workflow_role": "User modification - requires user_id from authentication APIs"
+    },
+    {
+      "api_name": "calculate",
+      "tool_type": "GENERIC",
+      "inputs": {
+        "expression": "str"
+      },
+      "output": "str",
+      "description": "Calculate the result of a mathematical expression.",
+      "workflow_role": "Utility - standalone, helps with price calculations"
+    },
+    {
+      "api_name": "transfer_to_human_agents",
+      "tool_type": "GENERIC",
+      "inputs": {
+        "summary": "str"
+      },
+      "output": "str",
+      "description": "Transfer the user to a human agent.",
+      "workflow_role": "Escalation - standalone, called when agent cannot handle request"
+    }
+  ],
+  "edges": [
+    {
+      "from": "find_user_id_by_email",
+      "to": "get_user_details",
+      "via_parameter": "user_id",
+      "reasoning": "Authentication flow: find_user_id_by_email returns user_id which is used to get full user details"
+    },
+    {
+      "from": "find_user_id_by_name_zip",
+      "to": "get_user_details",
+      "via_parameter": "user_id",
+      "reasoning": "Authentication flow: find_user_id_by_name_zip returns user_id which is used to get full user details"
+    },
+    {
+      "from": "find_user_id_by_email",
+      "to": "modify_user_address",
+      "via_parameter": "user_id",
+      "reasoning": "After authentication, user_id can be used to modify user's default address"
+    },
+    {
+      "from": "find_user_id_by_name_zip",
+      "to": "modify_user_address",
+      "via_parameter": "user_id",
+      "reasoning": "After authentication, user_id can be used to modify user's default address"
+    },
+    {
+      "from": "get_user_details",
+      "to": "get_order_details",
+      "via_parameter": "order_id",
+      "reasoning": "User object contains orders list with order_ids that can be used to get detailed order information"
+    },
+    {
+      "from": "get_order_details",
+      "to": "cancel_pending_order",
+      "via_parameter": "order_id",
+      "reasoning": "Get order details first to check status=pending, then use order_id to cancel it"
+    },
+    {
+      "from": "get_order_details",
+      "to": "modify_pending_order_address",
+      "via_parameter": "order_id",
+      "reasoning": "Get order details first to check status=pending, then use order_id to modify address"
+    },
+    {
+      "from": "get_order_details",
+      "to": "modify_pending_order_items",
+      "via_parameter": "order_id",
+      "reasoning": "Get order details to extract order_id, existing item_ids, and verify status=pending before modifying items"
+    },
+    {
+      "from": "get_user_details",
+      "to": "modify_pending_order_items",
+      "via_parameter": "payment_method_id",
+      "reasoning": "User object contains payment_methods dict with payment_method_ids needed for item modification"
+    },
+    {
+      "from": "get_order_details",
+      "to": "modify_pending_order_payment",
+      "via_parameter": "order_id",
+      "reasoning": "Get order details to verify status=pending before changing payment method"
+    },
+    {
+      "from": "get_user_details",
+      "to": "modify_pending_order_payment",
+      "via_parameter": "payment_method_id",
+      "reasoning": "User object contains payment_methods dict with payment_method_ids for the new payment method"
+    },
+    {
+      "from": "get_order_details",
+      "to": "exchange_delivered_order_items",
+      "via_parameter": "order_id",
+      "reasoning": "Get order details to extract order_id, item_ids from items list, and verify status=delivered"
+    },
+    {
+      "from": "get_user_details",
+      "to": "exchange_delivered_order_items",
+      "via_parameter": "payment_method_id",
+      "reasoning": "User object contains payment_methods for handling price difference in exchange"
+    },
+    {
+      "from": "get_order_details",
+      "to": "return_delivered_order_items",
+      "via_parameter": "order_id",
+      "reasoning": "Get order details to extract order_id, item_ids, and verify status=delivered before return"
+    },
+    {
+      "from": "get_user_details",
+      "to": "return_delivered_order_items",
+      "via_parameter": "payment_method_id",
+      "reasoning": "User object contains payment_methods for refund processing"
+    },
+    {
+      "from": "list_all_product_types",
+      "to": "get_product_details",
+      "via_parameter": "product_id",
+      "reasoning": "list_all_product_types returns JSON with product_ids that can be used to get detailed product information"
+    },
+    {
+      "from": "get_product_details",
+      "to": "modify_pending_order_items",
+      "via_parameter": "new_item_ids",
+      "reasoning": "Product object contains variants with item_ids and availability - needed to find valid new_item_ids for modification"
+    },
+    {
+      "from": "get_product_details",
+      "to": "exchange_delivered_order_items",
+      "via_parameter": "new_item_ids",
+      "reasoning": "Product object contains variants with item_ids and availability - needed to find valid new_item_ids for exchange"
+    },
+    {
+      "from": "get_order_details",
+      "to": "get_product_details",
+      "via_parameter": "product_id",
+      "reasoning": "Order object contains items with product_ids - can look up product details to see available variants for exchange/modify"
+    }
+  ],
+  "policy_constraints": [
+    {
+      "constraint": "Authentication required",
+      "description": "User identity must be verified by calling find_user_id_by_email or find_user_id_by_name_zip at the beginning of conversation, even if user provides user_id",
+      "affects_apis": ["find_user_id_by_email", "find_user_id_by_name_zip"],
+      "policy_reference": "Line 10: 'authenticate the user identity by locating their user id'"
+    },
+    {
+      "constraint": "User confirmation required",
+      "description": "Before any WRITE operation that updates the database, agent must explain details and get explicit user confirmation (yes/no)",
+      "affects_apis": [
+        "cancel_pending_order",
+        "modify_pending_order_address",
+        "modify_pending_order_items",
+        "modify_pending_order_payment",
+        "exchange_delivered_order_items",
+        "return_delivered_order_items",
+        "modify_user_address"
+      ],
+      "policy_reference": "Line 16: 'obtain explicit user confirmation (yes) to proceed'"
+    },
+    {
+      "constraint": "One tool call at a time",
+      "description": "Agent should make at most one tool call at a time and not respond to user simultaneously with tool call",
+      "affects_apis": "ALL",
+      "policy_reference": "Line 20: 'should at most make one tool call at a time'"
+    },
+    {
+      "constraint": "Single user per conversation",
+      "description": "Agent can only help one user per conversation and must deny requests for other users",
+      "affects_apis": "ALL",
+      "policy_reference": "Line 14: 'can only help one user per conversation'"
+    },
+    {
+      "constraint": "Order status constraints",
+      "description": "Different operations allowed based on order status: pending orders can be cancelled/modified, delivered orders can be returned/exchanged",
+      "affects_apis": [
+        "cancel_pending_order",
+        "modify_pending_order_address",
+        "modify_pending_order_items",
+        "modify_pending_order_payment",
+        "exchange_delivered_order_items",
+        "return_delivered_order_items"
+      ],
+      "policy_reference": "Lines 86-136: separate sections for pending vs delivered order operations"
+    },
+    {
+      "constraint": "Once-per-order operation limit",
+      "description": "modify_pending_order_items and exchange_delivered_order_items can only be called once per order",
+      "affects_apis": ["modify_pending_order_items", "exchange_delivered_order_items"],
+      "policy_reference": "Line 84, 110, 130: 'can only be called once' / 'only done once'"
+    },
+    {
+      "constraint": "Same product type requirement",
+      "description": "When modifying or exchanging items, new items must be of the same product type (e.g., cannot change shirt to shoe)",
+      "affects_apis": ["modify_pending_order_items", "exchange_delivered_order_items"],
+      "policy_reference": "Line 112, 132: 'There cannot be any change of product types'"
+    },
+    {
+      "constraint": "Refund payment method constraints",
+      "description": "For returns, refund must go to original payment method or an existing gift card. Gift card refunds are immediate, other refunds take 5-7 business days",
+      "affects_apis": ["return_delivered_order_items", "cancel_pending_order", "modify_pending_order_payment"],
+      "policy_reference": "Lines 92, 106, 124: refund timing and method constraints"
+    },
+    {
+      "constraint": "Transfer to human only when necessary",
+      "description": "Only transfer to human agent if user explicitly asks or if request cannot be handled within policy scope",
+      "affects_apis": ["transfer_to_human_agents"],
+      "policy_reference": "Line 24: 'if and only if the request cannot be handled'"
+    }
+  ],
+  "workflow_patterns": [
+    {
+      "pattern_name": "Authentication Flow",
+      "description": "Required first step for all customer service interactions",
+      "steps": [
+        "find_user_id_by_email OR find_user_id_by_name_zip",
+        "get_user_details (to retrieve order_ids and payment_method_ids)"
+      ]
+    },
+    {
+      "pattern_name": "Cancel Pending Order",
+      "description": "Workflow to cancel a pending order",
+      "steps": [
+        "Authentication Flow",
+        "get_order_details (verify status=pending)",
+        "cancel_pending_order (with confirmation)"
+      ]
+    },
+    {
+      "pattern_name": "Modify Pending Order Items",
+      "description": "Workflow to change items in a pending order",
+      "steps": [
+        "Authentication Flow",
+        "get_order_details (get current items, verify status=pending)",
+        "get_product_details (find available variants for new items)",
+        "modify_pending_order_items (with payment_method_id from user, with confirmation)"
+      ]
+    },
+    {
+      "pattern_name": "Exchange Delivered Order Items",
+      "description": "Workflow to exchange items in a delivered order",
+      "steps": [
+        "Authentication Flow",
+        "get_order_details (get current items, verify status=delivered)",
+        "get_product_details (find available variants for new items)",
+        "exchange_delivered_order_items (with payment_method_id from user, with confirmation)"
+      ]
+    },
+    {
+      "pattern_name": "Return Delivered Order Items",
+      "description": "Workflow to return items from a delivered order",
+      "steps": [
+        "Authentication Flow",
+        "get_order_details (get items to return, verify status=delivered)",
+        "return_delivered_order_items (with payment_method_id for refund, with confirmation)"
+      ]
+    },
+    {
+      "pattern_name": "Product Discovery",
+      "description": "Workflow to find and inspect products",
+      "steps": [
+        "list_all_product_types (to find product_id from product name)",
+        "get_product_details (to see available variants and prices)"
+      ]
+    }
+  ],
+  "metadata": {
+    "num_apis": 15,
+    "num_edges": 19,
+    "api_types": {
+      "READ": 6,
+      "WRITE": 7,
+      "GENERIC": 2
+    },
+    "analysis_method": "Manual analysis based on domain logic and workflow understanding",
+    "key_insights": [
+      "Authentication APIs (find_user_id_*) are required entry points for nearly all workflows",
+      "get_user_details and get_order_details are central hubs that provide IDs needed by many other APIs",
+      "Order modification/cancellation APIs require checking order status first via get_order_details",
+      "Product APIs are needed when modifying or exchanging items to find valid variant item_ids",
+      "calculate and transfer_to_human_agents are standalone utilities with no dependencies"
+    ]
+  }
+}
+

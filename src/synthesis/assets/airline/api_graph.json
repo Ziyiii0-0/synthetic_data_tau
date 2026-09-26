@@ -1,0 +1,425 @@
+{
+  "domain": "airline",
+  "description": "API dependency graph for airline domain based on manual analysis of actual workflow dependencies",
+  "nodes": [
+    {
+      "api_name": "get_user_details",
+      "tool_type": "READ",
+      "inputs": {
+        "user_id": "str"
+      },
+      "output": "User",
+      "description": "Get the details of a user, including their reservations.",
+      "workflow_role": "User information retrieval - provides reservation_ids and payment_method_ids"
+    },
+    {
+      "api_name": "list_all_airports",
+      "tool_type": "READ",
+      "inputs": {},
+      "output": "List[AirportCode]",
+      "description": "Returns a list of all available airports with IATA codes and city names.",
+      "workflow_role": "Airport discovery - maps city names to IATA codes"
+    },
+    {
+      "api_name": "search_direct_flight",
+      "tool_type": "READ",
+      "inputs": {
+        "origin": "str",
+        "destination": "str",
+        "date": "str"
+      },
+      "output": "List[DirectFlight]",
+      "description": "Search for direct flights between two cities on a specific date.",
+      "workflow_role": "Flight search - provides available flight numbers, times, prices, and seat availability"
+    },
+    {
+      "api_name": "search_onestop_flight",
+      "tool_type": "READ",
+      "inputs": {
+        "origin": "str",
+        "destination": "str",
+        "date": "str"
+      },
+      "output": "List[Tuple[DirectFlight, DirectFlight]]",
+      "description": "Search for one-stop flights between two cities on a specific date.",
+      "workflow_role": "Flight search - provides pairs of connecting flights with details"
+    },
+    {
+      "api_name": "get_flight_status",
+      "tool_type": "READ",
+      "inputs": {
+        "flight_number": "str",
+        "date": "str"
+      },
+      "output": "str",
+      "description": "Get the status of a flight (available, delayed, on time, flying).",
+      "workflow_role": "Flight status check - verifies if flight is bookable or has issues"
+    },
+    {
+      "api_name": "get_reservation_details",
+      "tool_type": "READ",
+      "inputs": {
+        "reservation_id": "str"
+      },
+      "output": "Reservation",
+      "description": "Get the details of a reservation.",
+      "workflow_role": "Reservation information retrieval - provides flights, passengers, payments, status"
+    },
+    {
+      "api_name": "book_reservation",
+      "tool_type": "WRITE",
+      "inputs": {
+        "user_id": "str",
+        "origin": "str",
+        "destination": "str",
+        "flight_type": "FlightType",
+        "cabin": "CabinClass",
+        "flights": "List[FlightInfo]",
+        "passengers": "List[Passenger]",
+        "payment_methods": "List[Payment]",
+        "total_baggages": "int",
+        "nonfree_baggages": "int",
+        "insurance": "Insurance"
+      },
+      "output": "Reservation",
+      "description": "Book a new flight reservation with flights, passengers, and payment.",
+      "workflow_role": "Reservation creation - requires flight info from search, payment_method_ids from user"
+    },
+    {
+      "api_name": "cancel_reservation",
+      "tool_type": "WRITE",
+      "inputs": {
+        "reservation_id": "str"
+      },
+      "output": "Reservation",
+      "description": "Cancel the whole reservation and process refunds.",
+      "workflow_role": "Reservation cancellation - requires reservation_id and must verify cancellation policy"
+    },
+    {
+      "api_name": "update_reservation_flights",
+      "tool_type": "WRITE",
+      "inputs": {
+        "reservation_id": "str",
+        "cabin": "CabinClass",
+        "flights": "List[FlightInfo]",
+        "payment_id": "str"
+      },
+      "output": "Reservation",
+      "description": "Update the flight information of a reservation including cabin change.",
+      "workflow_role": "Reservation modification - requires reservation_id, new flight info from search, payment_method_id"
+    },
+    {
+      "api_name": "update_reservation_baggages",
+      "tool_type": "WRITE",
+      "inputs": {
+        "reservation_id": "str",
+        "total_baggages": "int",
+        "nonfree_baggages": "int",
+        "payment_id": "str"
+      },
+      "output": "Reservation",
+      "description": "Update the baggage information of a reservation.",
+      "workflow_role": "Reservation modification - requires reservation_id and payment_method_id for additional baggage fees"
+    },
+    {
+      "api_name": "update_reservation_passengers",
+      "tool_type": "WRITE",
+      "inputs": {
+        "reservation_id": "str",
+        "passengers": "List[Passenger]"
+      },
+      "output": "Reservation",
+      "description": "Update the passenger information of a reservation (same number of passengers).",
+      "workflow_role": "Reservation modification - requires reservation_id, number of passengers must match"
+    },
+    {
+      "api_name": "send_certificate",
+      "tool_type": "WRITE",
+      "inputs": {
+        "user_id": "str",
+        "amount": "int"
+      },
+      "output": "str",
+      "description": "Send a travel certificate to a user as compensation.",
+      "workflow_role": "Compensation - requires user_id, adds certificate to user's payment methods"
+    },
+    {
+      "api_name": "calculate",
+      "tool_type": "GENERIC",
+      "inputs": {
+        "expression": "str"
+      },
+      "output": "str",
+      "description": "Calculate the result of a mathematical expression.",
+      "workflow_role": "Utility - standalone, helps with price calculations"
+    },
+    {
+      "api_name": "transfer_to_human_agents",
+      "tool_type": "GENERIC",
+      "inputs": {
+        "summary": "str"
+      },
+      "output": "str",
+      "description": "Transfer the user to a human agent.",
+      "workflow_role": "Escalation - standalone, called when agent cannot handle request"
+    }
+  ],
+  "edges": [
+    {
+      "from": "get_user_details",
+      "to": "get_reservation_details",
+      "via_parameter": "reservation_id",
+      "reasoning": "User object contains reservations list with reservation_ids that can be used to get detailed reservation information"
+    },
+    {
+      "from": "get_user_details",
+      "to": "book_reservation",
+      "via_parameter": "payment_methods",
+      "reasoning": "User object contains payment_methods dict with payment_method_ids needed for booking"
+    },
+    {
+      "from": "get_user_details",
+      "to": "update_reservation_flights",
+      "via_parameter": "payment_id",
+      "reasoning": "User object contains payment_methods for handling price differences when changing flights"
+    },
+    {
+      "from": "get_user_details",
+      "to": "update_reservation_baggages",
+      "via_parameter": "payment_id",
+      "reasoning": "User object contains payment_methods for paying additional baggage fees"
+    },
+    {
+      "from": "get_user_details",
+      "to": "send_certificate",
+      "via_parameter": "user_id",
+      "reasoning": "After verifying user details, can send certificate as compensation"
+    },
+    {
+      "from": "list_all_airports",
+      "to": "search_direct_flight",
+      "via_parameter": "origin/destination",
+      "reasoning": "Airport list provides IATA codes (e.g., SFO, JFK) needed for flight searches"
+    },
+    {
+      "from": "list_all_airports",
+      "to": "search_onestop_flight",
+      "via_parameter": "origin/destination",
+      "reasoning": "Airport list provides IATA codes needed for one-stop flight searches"
+    },
+    {
+      "from": "search_direct_flight",
+      "to": "book_reservation",
+      "via_parameter": "flights",
+      "reasoning": "Search results provide flight_number, date, prices, and availability needed to construct FlightInfo objects for booking"
+    },
+    {
+      "from": "search_onestop_flight",
+      "to": "book_reservation",
+      "via_parameter": "flights",
+      "reasoning": "One-stop search results provide connecting flight details needed for booking multi-leg trips"
+    },
+    {
+      "from": "search_direct_flight",
+      "to": "update_reservation_flights",
+      "via_parameter": "flights",
+      "reasoning": "Search results provide new flight options when modifying existing reservation"
+    },
+    {
+      "from": "search_onestop_flight",
+      "to": "update_reservation_flights",
+      "via_parameter": "flights",
+      "reasoning": "One-stop search provides alternative flight options for reservation modifications"
+    },
+    {
+      "from": "search_direct_flight",
+      "to": "get_flight_status",
+      "via_parameter": "flight_number/date",
+      "reasoning": "Search results provide flight_number and date that can be used to check detailed status"
+    },
+    {
+      "from": "search_onestop_flight",
+      "to": "get_flight_status",
+      "via_parameter": "flight_number/date",
+      "reasoning": "One-stop search provides flight details that can be used to verify status of each segment"
+    },
+    {
+      "from": "get_reservation_details",
+      "to": "cancel_reservation",
+      "via_parameter": "reservation_id",
+      "reasoning": "Get reservation to verify cancellation eligibility, then use reservation_id to cancel"
+    },
+    {
+      "from": "get_reservation_details",
+      "to": "update_reservation_flights",
+      "via_parameter": "reservation_id",
+      "reasoning": "Get reservation to see current flights and verify modification rules before updating"
+    },
+    {
+      "from": "get_reservation_details",
+      "to": "update_reservation_baggages",
+      "via_parameter": "reservation_id",
+      "reasoning": "Get reservation to see current baggage count before updating"
+    },
+    {
+      "from": "get_reservation_details",
+      "to": "update_reservation_passengers",
+      "via_parameter": "reservation_id",
+      "reasoning": "Get reservation to see current passengers before updating their information"
+    },
+    {
+      "from": "get_reservation_details",
+      "to": "send_certificate",
+      "via_parameter": "user_id",
+      "reasoning": "Reservation contains user_id and flight details needed to determine appropriate compensation"
+    },
+    {
+      "from": "get_reservation_details",
+      "to": "get_flight_status",
+      "via_parameter": "flight_number/date",
+      "reasoning": "Reservation contains flights with flight_number and date that can be checked for delays/cancellations"
+    }
+  ],
+  "policy_constraints": [
+    {
+      "constraint": "User confirmation required",
+      "description": "Before any action that updates booking database (booking, modifying flights, editing baggage, changing cabin, updating passengers), agent must explain details and get explicit user confirmation (yes)",
+      "affects_apis": [
+        "book_reservation",
+        "update_reservation_flights",
+        "update_reservation_baggages",
+        "update_reservation_passengers",
+        "cancel_reservation"
+      ],
+      "policy_reference": "Line 7: 'obtain explicit user confirmation (yes) to proceed'"
+    },
+    {
+      "constraint": "One tool call at a time",
+      "description": "Agent should make only one tool call at a time and not respond to user simultaneously with tool call",
+      "affects_apis": "ALL",
+      "policy_reference": "Line 11: 'only make one tool call at a time'"
+    },
+    {
+      "constraint": "User ID required",
+      "description": "Agent must first obtain user_id from user before booking",
+      "affects_apis": ["book_reservation"],
+      "policy_reference": "Line 65: 'must first obtain the user id'"
+    },
+    {
+      "constraint": "Same cabin across flights",
+      "description": "Cabin class must be the same across all flights in a reservation",
+      "affects_apis": ["book_reservation", "update_reservation_flights"],
+      "policy_reference": "Line 70: 'Cabin class must be the same across all the flights'"
+    },
+    {
+      "constraint": "Payment method limitations",
+      "description": "At most 1 certificate, 1 credit card, 3 gift cards per reservation. All must be in user profile.",
+      "affects_apis": ["book_reservation"],
+      "policy_reference": "Lines 78-80: payment method limits"
+    },
+    {
+      "constraint": "Basic economy cannot be modified",
+      "description": "Basic economy flights cannot have their flight segments modified",
+      "affects_apis": ["update_reservation_flights"],
+      "policy_reference": "Line 110: 'Basic economy flights cannot be modified'"
+    },
+    {
+      "constraint": "Cabin change restrictions",
+      "description": "Cabin cannot be changed if any flight has already been flown",
+      "affects_apis": ["update_reservation_flights"],
+      "policy_reference": "Line 116: 'Cabin cannot be changed if any flight...already been flown'"
+    },
+    {
+      "constraint": "Baggage can only be added",
+      "description": "User can add but not remove checked bags",
+      "affects_apis": ["update_reservation_baggages"],
+      "policy_reference": "Line 123: 'can add but not remove checked bags'"
+    },
+    {
+      "constraint": "Passenger count cannot change",
+      "description": "Can modify passenger info but not the number of passengers",
+      "affects_apis": ["update_reservation_passengers"],
+      "policy_reference": "Lines 127-128: 'cannot modify the number of passengers'"
+    },
+    {
+      "constraint": "Cancellation eligibility",
+      "description": "Flight can be cancelled only if: booked within 24 hrs, flight cancelled by airline, business class, or has insurance covering reason. Cannot cancel if any portion has been flown.",
+      "affects_apis": ["cancel_reservation"],
+      "policy_reference": "Lines 141-147: cancellation conditions"
+    },
+    {
+      "constraint": "Compensation rules",
+      "description": "Only compensate silver/gold members or business/insured passengers. $100 per passenger for cancelled flights, $50 per passenger for delayed flights. Do not proactively offer.",
+      "affects_apis": ["send_certificate"],
+      "policy_reference": "Lines 154-167: compensation policy"
+    }
+  ],
+  "workflow_patterns": [
+    {
+      "pattern_name": "Book New Reservation",
+      "description": "Complete workflow to search and book a flight",
+      "steps": [
+        "get_user_details (get user_id, payment methods)",
+        "list_all_airports (if needed to find IATA codes)",
+        "search_direct_flight OR search_onestop_flight (find available flights)",
+        "book_reservation (with confirmation, includes flights, passengers, payment)"
+      ]
+    },
+    {
+      "pattern_name": "Modify Existing Reservation Flights",
+      "description": "Workflow to change flights in a reservation",
+      "steps": [
+        "get_user_details (get reservation_ids and payment_method_ids)",
+        "get_reservation_details (verify current reservation, check cabin class, ensure not basic economy)",
+        "search_direct_flight OR search_onestop_flight (find new flight options)",
+        "update_reservation_flights (with confirmation, payment_id for price difference)"
+      ]
+    },
+    {
+      "pattern_name": "Cancel Reservation",
+      "description": "Workflow to cancel a flight reservation",
+      "steps": [
+        "get_user_details (get reservation_ids)",
+        "get_reservation_details (verify no segments flown, check booking time, insurance, cabin)",
+        "cancel_reservation (with confirmation, processes refunds)"
+      ]
+    },
+    {
+      "pattern_name": "Handle Flight Issues and Compensation",
+      "description": "Workflow to check flight status and provide compensation",
+      "steps": [
+        "get_user_details (verify membership level)",
+        "get_reservation_details (get flights and passenger count)",
+        "get_flight_status (verify delay or cancellation)",
+        "send_certificate (if eligible: $100 for cancelled, $50 for delayed)"
+      ]
+    },
+    {
+      "pattern_name": "Add Baggage to Reservation",
+      "description": "Workflow to add checked bags to existing reservation",
+      "steps": [
+        "get_user_details (get reservation_ids and payment_method_ids)",
+        "get_reservation_details (check current baggage count)",
+        "update_reservation_baggages (with confirmation, payment_id for fees)"
+      ]
+    }
+  ],
+  "metadata": {
+    "num_apis": 14,
+    "num_edges": 19,
+    "api_types": {
+      "READ": 6,
+      "WRITE": 6,
+      "GENERIC": 2
+    },
+    "analysis_method": "Manual analysis based on domain logic and workflow understanding",
+    "key_insights": [
+      "get_user_details is a central hub providing user_id, reservation_ids, and payment_method_ids",
+      "Flight search APIs (search_direct_flight, search_onestop_flight) feed into booking and modification",
+      "get_reservation_details is required before any reservation modification to verify eligibility",
+      "Policy enforcement happens in application logic, not in API - agent must verify rules",
+      "Compensation flow requires checking multiple sources: user membership, reservation cabin, flight status"
+    ]
+  }
+}
+
