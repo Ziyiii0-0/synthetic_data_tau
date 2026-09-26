@@ -242,13 +242,29 @@ pytest tests/test_synthesis.py          # offline pipeline tests
 pytest tests                            # full τ² suite (some tests call an LLM)
 ```
 
+## Citation
+
+If you use this code or data, please cite:
+
+```bibtex
+@misc{wang2026trajectory2task,
+      title={Trajectory2Task: Training Robust Tool-Calling Agents with Synthesized Yet Verifiable Data for Complex User Intents},
+      author={Ziyi Wang and Yuxuan Lu and Yimeng Zhang and Pei Chen and Ziwei Dong and Jing Huang and Jiri Gesi and Xianfeng Tang and Chen Luo and Qun Liu and Yisi Sang and Hanqing Lu and Manling Li and Jin Lai and Dakuo Wang},
+      year={2026},
+      eprint={2601.20144},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2601.20144},
+}
+```
+
 ## Acknowledgements and license
 
 `src/tau2` and `data/tau2` are adapted from
 [τ²-bench](https://github.com/sierra-research/tau2-bench) (MIT, © Sierra
 Research); the vendored copy adds infeasible-task evaluation (forbidden and
 required actions) and extended-thinking support. Only the airline, retail and mock
-domains are kept. If you use this code, please also cite τ²-bench:
+domains are kept. Please also cite τ²-bench:
 
 ```bibtex
 @misc{barres2025tau2,
