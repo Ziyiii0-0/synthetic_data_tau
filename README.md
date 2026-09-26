@@ -63,7 +63,7 @@ tests/                    τ² tests + offline pipeline tests (tests/test_synthe
 Python ≥ 3.10.
 
 ```bash
-git clone <this repo> && cd synthetic_tau
+git clone https://github.com/Ziyiii0-0/synthetic_data_tau.git && cd synthetic_data_tau
 python -m venv .venv && source .venv/bin/activate
 pip install -e .
 ```
